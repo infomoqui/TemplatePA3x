@@ -1,0 +1,195 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// Color versions
+// --------------------------------------------------
+
+@JMstyle: @JMcolorVersion;
+
+//images directory
+@JMimgDir: @JMimagesDir;
+
+// Layout values
+// --------------------------------------------------
+
+//body
+//default line-height
+@JMbaseLineHeight: 1.7;
+
+@JMbodyFontSize: @JMbaseFontSize;
+@JMbodyBackground: @JMpageBackground;
+@JMbaseFontWeight: 400;
+
+//megamenu
+@JMtopmenuBackground: @JMheaderBackground;
+//@JMtopmenuFontColor
+
+//top1
+@JMtop1Background: @JMpageBackground;
+@JMtop1FontColor: @JMbaseFontColor;
+
+//main
+@JMmainBackground: @JMpageBackground;
+@JMmainFontColor: @JMbaseFontColor;
+
+//bottom1
+@JMbottom1Background: @JMpageBackground;
+@JMbottom1FontColor: @JMbaseFontColor;
+
+//bottom2
+@JMbottom2Background: @JMtop2Background;
+@JMbottom2FontColor: @JMtop2FontColor;
+@JMbottom2ModuleTitle: @JMtop2ModuleTitle;
+
+//footer-mod
+
+//copyrights
+@JMcopyrightFontSize: 0.833em;
+
+// DJ Megamenu values
+// --------------------------------------------------
+
+@JMtopmenuItemHeight: 13px; //padding top / bottom
+@JMtopmenuItemWidth: 30px; //padding left / right
+@JMtopmenuFontWeight: 700;
+
+@JMtopmenuFontColorHover: @JMtopmenuFontColor;
+@JMtopmenuBackground: @JMheaderBackground;
+
+//@JMtopSubmenuBackground
+//@JMtopSubmenuFontColor
+@JMtopSubmenuFontColorHover: @JMtopSubmenuFontColor;
+
+// High Contrast
+// --------------------------------------------------
+
+@JMlinkFocusColor: #ff0000;
+
+//black - white
+@JMhcBackground: @black;
+@JMhcFontColor: #ffffff;
+@JMhcFontColor2: #ffff00;
+@JMhcBackground2: #1a1f25;
+
+//black - yellow
+@JMhc2Background: @black;
+@JMhc2FontColor: #ffff00;
+@JMhc2FontColor2: #ffffff;
+@JMhc2Background2: #1a1f25;
+
+//yellow - black
+@JMhc3Background: #ffff00;
+@JMhc3FontColor: @black;
+@JMhc3FontColor2: #0000ff;
+@JMhc3Background2: #8bfffb;
+
+// font-switcher
+// --------------------------------------------------
+
+@JMfontFactor70: 0.7;
+@JMfontFactor80: 0.8;
+@JMfontFactor90: 0.9;
+@JMfontFactor110: 1.1;
+@JMfontFactor120: 1.2;
+@JMfontFactor130: 1.3;
+
+@JMfontFactorContent70: 0.7;
+@JMfontFactorContent80: 0.8;
+@JMfontFactorContent90: 0.9;
+@JMfontFactorContent110: 1.2;
+@JMfontFactorContent120: 1.5;
+@JMfontFactorContent130: 2; //200% of base font size required in WCAG
+
+// Skip menu
+// --------------------------------------------------
+
+@JMskipMenuFontColor: @JMschemeFontColor;
+@JMskipMenuBackground: @JMstyle;
+@JMskipMenuFontColorHover: @JMstyle;
+@JMskipMenuBackgroundHover: @JMschemeFontColor;
+
+// Modules
+// --------------------------------------------------
+
+@JMmoduleTitleFontWeight: 700;
+@JMmoduleTitleFontColor: @JMmoduleTitleColor;
+
+// Menu
+// --------------------------------------------------
+
+@JMmenuItemFontColor: @JMstyleLink;
+@JMmenuItemFontColorHover: @JMstyleLinkHover;
+
+// Buttons, Readmore, Inputs
+// --------------------------------------------------
+
+@JMbuttonFontSize: 23px;
+@JMbuttonFontWeight: 700;
+@JMbuttonPaddingTop: 18px;
+@JMbuttonPaddingSide: 30px;
+@JMbuttonPadding: @JMbuttonPaddingTop @JMbuttonPaddingSide;
+@JMbuttonFontColor: @JMschemeFontColor;
+@JMbuttonFontColorHover: @JMschemeFontColor;
+@JMbuttonBackground: @JMstyle;
+@JMbuttonBackgroundHover: darken(@JMbuttonBackground, 20%);
+
+@JMreadmoreFontColor: @JMstyle;
+
+//dropdowns (article edit button list background)
+@JMstyleButtonDropdown: @JMstyle;
+
+//inputs
+@JMinputHeight: 56px;
+@JMinputPadding: 25px;
+@JMinputFontSize: 16px;
+@JMinputBorder: #e5e5e5;
+@JMinputFontColor: @JMbaseFontColor;
+@JMinputBackground: #ffffff;
+@JMinputFocusBorder: @JMstyle;
+@JMinputBorderRadius: 0;
+
+// Template values
+// --------------------------------------------------
+
+//links
+@JMstyleLink: @JMstyle;
+@JMstyleLinkHover: darken(@JMstyleLink, 10%);
+
+//page headings
+@JMarticleTitleFontWeight: 700;
+@JMarticleTitleFontColorHover: @JMstyle;
+
+//blog titles
+@JMblogTitleFontWeight: 700;
+@JMblogTitleFontColorHover: @JMstyle;
+
+//component headings
+@JMcomponentHeadingFontSize: @JMarticleTitleFontSize;
+@JMcomponentHeadingFontFamily: @JMarticleTitleFontFamily;
+@JMcomponentHeadingFontWeight: 700;
+@JMcomponentHeadingFontColorHover: @JMstyle;
+
+//article info
+@JMarticleInfoFontColor: @JMbaseFontColor;
+
+//selection
+@JMselectionFontColor: @JMschemeFontColor;
+
+//table
+@JMtableBackground: transparent;
+@JMtableBorder: @JMborder;
+@JMtableHeadBackground: @JMstyle;
+@JMtableHeadFontColor: @JMschemeFontColor;
+@JMtableBorderRadius: 0;
+@JMtableBackgroundAccent: #f8f8f8;
+@JMtableBackgroundHover: #f8f8f8;
+
+//offcanvas
+@JMoffCanvasToolbarBackground: jmdarken(@JMoffCanvasBackground, 5%);
+@JMoffCanvasIconSize: 20px;
+@JMoffCanvasModuleTitle: @JMoffCanvasFontColor;
+

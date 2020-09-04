@@ -1,0 +1,58 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MEDIATOOLS RESPONSIVE
+//---------------------------------------------------------------
+
+
+@media (max-width: 979px) {
+	.dj-slide-description,
+	.dj-slide-description p {
+		.text-cut();
+	}
+
+	.djslider-loader .navigation-container-custom .cust-navigation-in {
+		padding: 0 !important;
+	}
+}
+
+
+@media (max-width: 480px) {
+	.dj-slide-title {
+		font-size: 14px !important;
+	}
+
+	.dj-slide-desc-text {
+		padding: 10px!important;
+	}
+	.dj-readmore-wrapper {
+		display: none!important;
+	}
+
+	.skitter-square .play_pause_button,
+	.skitter-square .next_button,
+	.skitter-square .focus_button,
+	.skitter-square .prev_button {
+		display: none !important;
+	}
+}
+
+@media (max-width: 320px) {
+	.dj-slide-title,
+	.nivo-controlNav,
+	.dj-slide-description,
+	.dj-slide-desc-text,
+	.dj-slide-desc-bg {
+		display: none!important;
+	}
+	.dj-indicators,
+	.navigation-container,
+	.navigation-container-custom {
+		visibility: hidden !important;
+		pointer-events: none;
+	}
+}

@@ -1,0 +1,84 @@
+//
+// Bootstrap v2.3.2
+//
+// Copyright 2013 Twitter, Inc
+// Licensed under the Apache License v2.0
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Designed and built with all the love in the world by @mdo and @fat.
+//
+
+// Core variables and mixins
+@import "template_variables.less"; //JM extended variables
+@import "bootstrap_variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/mixins.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/mixins-ext.less"; //JM extended mixins
+
+// CSS Reset
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/reset.less";
+
+// Grid system and page structure
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/scaffolding.less";
+@import "override/ltr/scaffolding.less"; //JM Override
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/grid.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/grid-ext.less"; //JM extended grid
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/layouts.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/layouts-ext.less"; //JM extended layout
+
+// Base CSS
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/type.less";
+@import "override/ltr/type.less"; //JM Override
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/code.less";
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/forms.less";
+@import "override/ltr/forms.less"; //JM Override
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/tables.less";
+@import "override/ltr/tables.less"; //JM Override
+
+// Components: common
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/sprites.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/sprites-ext.less"; //JM extended sprites
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/dropdowns.less";
+@import "override/ltr/dropdowns.less"; //JM Override
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/wells.less";
+@import "override/ltr/wells.less"; //JM Override
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/component-animations.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/close.less";
+
+// Components: Buttons & Alerts
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/buttons.less";
+@import "override/ltr/buttons.less"; //JM Override
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/button-groups.less";
+@import "override/ltr/button-groups.less"; //JM Override
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/navs.less";
+@import "override/ltr/navs.less"; //JM Override
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/navbar.less";
+@import "override/ltr/navbar.less"; //JM Override
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/breadcrumbs.less";
+@import "override/ltr/breadcrumbs.less"; //JM Override
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/pagination.less";
+@import "override/ltr/pagination.less"; //JM Override
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/pager.less";
+@import "override/ltr/pager.less"; //JM Override
+
+// Components: Popovers
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/modals.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/tooltip.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/popovers.less";
+
+// Components: Misc
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/thumbnails.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/media.less";
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/labels-badges.less";
+@import "override/ltr/labels-badges.less"; //JM Override
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/progress-bars.less";
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/accordion.less";
+@import "override/ltr/accordion.less"; //JM Override
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/carousel.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/hero-unit.less";
+
+// Utility classes
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/utilities.less"; // Has to be last to override when necessary
+@import "override/ltr/utilities.less"; //JM Override

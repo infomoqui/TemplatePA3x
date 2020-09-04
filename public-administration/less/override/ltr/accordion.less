@@ -1,0 +1,72 @@
+//
+// Accordion
+// --------------------------------------------------
+
+
+// Parent container
+.accordion,
+.pane-sliders {
+  margin-bottom: @baseLineHeight;
+}
+
+.accordion-heading,
+.pane-sliders h3.title {
+  font-size: 1em;
+  margin: 0;
+}
+.accordion-heading .accordion-toggle,
+.pane-sliders h3.title a {
+  display: block;
+  cursor: pointer;
+  .box-sizing(border-box);
+  margin: 0;
+  line-height: @baseLineHeight;
+  text-decoration: none;
+  background: @JMtabsTitleBackground;
+  color: @JMtabsTitleFontColor;
+  font-weight: @JMmoduleTitleFontWeight;
+  font-family: @JMmoduleTitleFontFamily;
+  font-size: @JMmoduleTitleFontSize;
+  padding: 23px 30px;
+  &:focus {
+    outline: 0;
+  }
+  &:focus,
+  &:hover {
+    background: @JMstyle;
+    color: @JMschemeFontColor;
+  }
+}
+
+// .accordion-heading .accordion-toggle.collapsed:after,
+// .pane-sliders h3.title.pane-toggler-down a:after {
+// }
+
+// .accordion .accordion-group,
+// .pane-sliders .panel {
+// }
+
+.accordion .accordion-group + .accordion-group,
+.pane-sliders .panel + .panel {
+  margin-top: 5px;
+}
+
+// General toggle styles
+.accordion-toggle,
+.pane-sliders h3.title {
+  cursor: pointer;
+}
+
+// Inner needs the styles because you can't animate properly with any styles on the element
+.accordion-inner,
+.pane-slider {
+  padding: 30px;
+  background: @JMtabsBackground;
+	color: @JMtabsFontColor;
+}
+
+.pane-slider {
+  &.pane-down {
+    padding: 30px !important;
+  }
+}

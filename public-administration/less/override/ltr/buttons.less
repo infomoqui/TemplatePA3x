@@ -1,0 +1,277 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn {
+	display: inline-block;
+	margin-bottom: 0; // For input.btn
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	line-height: @baseLineHeight;
+	text-decoration: none;
+	//JM added
+	border: none;
+	color: @JMbuttonFontColor;
+	background: @JMbuttonBackground;
+	.box-sizing(border-box);
+	font-family: inherit;
+	font-size: @JMbuttonFontSize;
+	font-weight: @JMbuttonFontWeight;
+	padding: @JMbuttonPadding;
+	
+	// Hover/focus/active state
+	&:hover,
+	&:focus,
+	&:active {
+		//JM .transition(none);
+		text-decoration: none;
+		.transition(all 0.2s ease-in);  
+		color: @JMbuttonFontColorHover;
+		background: @JMbuttonBackgroundHover;
+	}
+
+	// Focus state for keyboard and accessibility
+	&:focus {
+		.tab-focus();
+	}
+
+	// Active state
+	&.active,
+	&:active {
+		outline: 0;
+	}
+
+	// Disabled state
+	&.disabled,
+	&[disabled] {
+		cursor: default;
+		.opacity(65);
+	}
+}
+
+a.button,
+input.button,
+button.button,
+input[type="submit"],
+button[type="submit"],
+input[type="reset"],
+button[type="reset"] {
+	.btn();
+}
+
+button.button,
+button[type="submit"],
+button[type="reset"] {
+	padding: 17px 30px;
+}
+
+#jm-logo-nav,
+#jm-header,
+#jm-bottom3 {
+	.btn,
+	a.button,
+	input.button,
+	button.button,
+	input[type="submit"],
+	button[type="submit"],
+	input[type="reset"],
+	button[type="reset"] {
+		color: @JMbuttonBackground;
+		background: @JMbuttonFontColor;
+		&:hover,
+		&:focus {
+			//color: @JMbuttonBackground;
+			//background: rgba(red(@JMbuttonFontColor), green(@JMbuttonFontColor), blue(@JMbuttonFontColor), 0.5);
+			color: @JMbuttonFontColorHover;
+			background: @JMbuttonBackgroundHover;
+		}
+	}
+}
+
+#jm-footer-mod {
+	.btn,
+	a.button,
+	input.button,
+	button.button,
+	input[type="submit"],
+	button[type="submit"],
+	input[type="reset"],
+	button[type="reset"] {
+		background: @JMfooterLinkColor;
+		color: @JMfooterBackground;
+		&:hover,
+		&:focus {
+			background: @JMfooterFontColor;
+			color: @JMfooterBackground;
+		}
+	}
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-large,
+.button.btn-large {
+	padding: 20px 30px;
+	min-width: 250px;
+	.border-radius(30px);
+}
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"],
+.button.btn-large [class^="icon-"],
+.button.btn-large [class*=" icon-"] {
+	margin-top: 6px; //JM edited
+}
+
+// Small
+.btn-small,
+.button.btn-small {
+	padding: @paddingSmall;
+	font-size: @fontSizeSmall;
+	.border-radius(@borderRadiusSmall);
+}
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"],
+.button.btn-small [class^="icon-"],
+.button.btn-small [class*=" icon-"] {
+	margin-top: 2px; //JM edited
+}
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"],
+.button.btn-mini [class^="icon-"],
+.button.btn-mini [class*=" icon-"] {
+	margin-top: 1px; //JM edited
+}
+
+// Mini
+.btn-mini,
+.button.btn-mini {
+	padding: @paddingMini;
+	font-size: @fontSizeMini;
+	.border-radius(@borderRadiusSmall);
+}
+
+
+// Block button
+// -------------------------
+
+.btn-block,
+.button.btn-block {
+	display: block;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	.box-sizing(border-box);
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block,
+.btn-block + .button.btn-block {
+	margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	&.btn-block {
+		width: 100%;
+	}
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active,
+.button.btn-primary.active,
+.button.btn-warning.active,
+.button.btn-danger.active,
+.button.btn-success.active,
+.button.btn-info.active,
+.button.btn-inverse.active {
+	color: rgba(255,255,255,.75);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary,
+.button.btn-primary {
+	//JM background: @JMbuttonBackground;
+}
+// Warning appears are orange
+.btn-warning,
+.button.btn-warning {
+	.buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+}
+// Danger and error appear as red
+.btn-danger,
+.button.btn-danger {
+	.buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+}
+// Success appears as green
+.btn-success,
+.button.btn-success {
+	.buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+}
+// Info appears as a neutral blue
+.btn-info,
+.button.btn-info {
+	.buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+}
+// Inverse appears as dark gray
+.btn-inverse,
+.button.btn-inverse {
+	.buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+}
+
+// Link buttons
+// --------------------------------------------------
+
+// Make a button look and behave like a link
+.btn-link,
+.btn-link:active,
+.btn-link[disabled],
+.button.btn-link,
+.button.btn-link:active,
+.button.btn-link[disabled] {
+	background-color: transparent;
+	background-image: none;
+	.box-shadow(none);
+}
+.btn-link,
+.button.btn-link {
+	border-color: transparent;
+	cursor: pointer;
+	color: @linkColor;
+	.border-radius(0);
+}
+.btn-link:hover,
+.btn-link:focus,
+.button.btn-link:hover,
+.button.btn-link:focus {
+	color: @linkColorHover;
+	text-decoration: underline;
+	background-color: transparent;
+}
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus,
+.button.btn-link[disabled]:hover,
+.button.btn-link[disabled]:focus {
+	color: @grayDark;
+	text-decoration: none;
+}

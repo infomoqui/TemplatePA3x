@@ -1,0 +1,80 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+// Body reset
+// -------------------------
+
+body {
+  margin: 0;
+  font-family: @JMbaseFontFamily; //JM
+  font-weight: @JMbaseFontWeight; //JM
+  font-size: @JMbaseFontSize; //JM
+  line-height: @JMbaseLineHeight; //JM edited
+  color: @JMbaseFontColor; //JM
+  background-color: @JMbodyBackground; //JM edited
+}
+
+// Links
+// -------------------------
+
+a {
+  color: @JMstyleLink;
+  text-decoration: none;
+  &:hover {
+    color: @JMstyleLinkHover;
+    text-decoration: underline;
+  }
+  &:focus {
+  	outline: 0;
+  }
+}
+
+#jm-top-bar a,
+#jm-logo-left a,
+#jm-logo-right a,
+#jm-header a,
+#jm-bottom3 a {
+  color: inherit;
+}
+
+#jm-footer a,
+#jm-footer-mod a {
+  color: @JMfooterLinkColor;
+}
+
+//selection
+::selection {
+  background: @JMstyle;
+  color: @JMselectionFontColor;
+}
+::-webkit-selection {
+  background: @JMstyle;
+  color: @JMselectionFontColor;
+}   
+::-moz-selection {
+  background: @JMstyle;
+  color: @JMselectionFontColor;
+}
+
+// Images
+// -------------------------
+
+// Rounded corners
+.img-rounded {
+  .border-radius(6px);
+}
+
+// Add polaroid-esque trim
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  .box-shadow(0 1px 3px rgba(0,0,0,.1));
+}
+
+// Perfect circle
+.img-circle {
+  .border-radius(100%); // crank the border-radius so it works with most reasonably sized images
+}

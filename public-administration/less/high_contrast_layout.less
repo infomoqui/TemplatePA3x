@@ -1,0 +1,1553 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/mixins-ext.less"; //JM extended mixins
+@import "template_mixins.less";
+
+// HIGH CONTRAST LAYOUT
+//---------------------------------------------------------------
+
+//focus
+*:focus {
+	outline: 2px solid @JMlinkFocusColor !important;
+}
+
+//default outline for sections
+*[tabindex='-1'] {
+	&:focus {
+		outline: none !important;
+	}
+}
+
+//disable :before / :after for screen readers
+@media reader, speech, aural {
+	*:before,
+	*:after {
+		display: none !important;
+		content: '' !important;
+		visibility: hidden;
+	}
+}
+
+*:not(.collapse),
+*:before,
+*:after {
+	.transition(none) !important;
+}
+
+body.highcontrast,
+body.highcontrast2,
+body.highcontrast3 {
+
+// WRAPPER
+
+	//template offcanvas disable
+	#jm-offcanvas,
+	.toggle-nav.menu {
+		display: none;
+	}
+
+	&.off-canvas-right.off-canvas #jm-allpage,
+	&.off-canvas-left.off-canvas #jm-allpage {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	//sticky-bar
+	#jm-logo-wrap-static {
+		display: none !important;
+	}
+	&.sticky-bar.scrolled #jm-logo-wrap {
+		position: static;
+	}
+
+	a:hover {
+		outline: 2px solid @JMlinkFocusColor !important;
+	}
+
+//END WRAPPER
+
+}
+
+//--------------------------------------------------------------------------------------------
+// High Contrast Function
+//--------------------------------------------------------------------------------------------
+
+.fncontrast(@JMcontrastFontColor, @JMcontrastFontColor2, @JMcontrastBackground, @JMcontrastBackground2) {
+/// FUNCTION WRAPPER
+
+// LAYOUT.LESS
+//------------------------------
+
+	//body
+	background-color: @JMcontrastBackground;
+	color: @JMcontrastFontColor;
+
+	#jm-allpage,
+	#jm-top-menu,
+	#jm-header,
+	#jm-top1,
+	#jm-top2,
+	#jm-bottom1,
+	#jm-bottom2 {
+		background-color: @JMcontrastBackground;
+		color: @JMcontrastFontColor;
+	}
+
+	&.sticky-bar.scrolled #jm-logo-wrap {
+		background: @JMcontrastBackground;
+	}
+
+	#jm-logo-nav {
+		background-color: @JMcontrastBackground;
+		color: @JMcontrastFontColor2;
+	}
+
+	#jm-top-menu,
+	#jm-footer {
+		border-color: lighten(@JMcontrastBackground, 10%);
+	}
+
+	#jm-main {
+		background: @JMcontrastBackground2;
+		color: @JMcontrastFontColor;
+	}
+
+	#jm-bottom3 {
+		background: @JMcontrastBackground2;
+		color: @JMcontrastFontColor;
+	}
+
+	#jm-footer,
+	#jm-footer-mod {
+		background-color: @JMcontrastBackground;
+		color: @JMcontrastFontColor2;
+	}
+
+	#jm-copy-powered {
+		a {
+			&:hover,
+			&:focus {
+				color: @JMcontrastFontColor;
+			}
+		}
+	}
+
+	#jm-back-top {
+		display: block !important;
+		.opacity(100) !important;
+		a {
+			.opacity(100) !important;
+			color: @JMcontrastFontColor;
+			background-color: @JMcontrastBackground;
+			border: 2px solid @JMcontrastFontColor;
+		}
+	}
+
+	#jm-top1 + #jm-system-message + #jm-main {
+		padding-top: (@JMbaseSpace * 2);
+	}
+
+	#jm-main + #jm-bottom1 {
+		padding-top: (@JMbaseSpace * 2);
+	}
+
+	#jm-main + #jm-bottom3 {
+		padding-top: 0;
+	}
+
+	// MODULES.LESS
+	//------------------------------
+
+	.jm-module {
+		.jm-title {
+			color: @JMcontrastFontColor2;
+		}
+	}
+	
+	.moduletable {
+		> h3 {
+			color: @JMcontrastFontColor2;
+		}
+	}
+	
+	//sections
+	#jm-header,
+	#jm-top2,
+	#jm-bottom2,
+	#jm-bottom3,
+	#jm-footer-mod {
+		.jm-module .jm-title,
+		.moduletable > h3 {
+			color: @JMcontrastFontColor2;
+		}
+	}
+
+	.jm-module.color-ms {
+		background: @JMcontrastBackground;
+		color: @JMcontrastFontColor;
+		.jm-title {
+			color: @JMcontrastFontColor2;
+		}
+	}
+
+	#jm-logo-wrap div.mod-languages {
+		ul.lang-inline {
+			li {
+				a {
+					&:hover {
+						color: @JMcontrastFontColor;
+						.opacity(100);
+					}
+				}
+				&.lang-active {
+					a {
+						color: @JMcontrastFontColor;
+						.opacity(100);
+					}
+				}
+			}
+		}
+	}
+
+	#jm-allpage .jmm-social.default,
+	#jm-footer-mod .jmm-social.default {
+		.jmm-link .jmm-ico {
+			background: @JMcontrastFontColor2;
+			color: @JMcontrastBackground;
+		}
+		.jmm-link:hover {
+			.jmm-ico {
+				background: @JMcontrastFontColor;
+				color: @JMcontrastBackground;
+			}
+		}
+	}
+
+	#jm-logo-right .jmm-social.default {
+		.jmm-link .jmm-ico {
+			background: @JMcontrastFontColor2;
+			color: @JMcontrastBackground;
+		}
+		.jmm-link:hover {
+			.jmm-ico {
+				background: @JMcontrastFontColor;
+				color: @JMcontrastBackground;
+			}
+		}
+	}
+
+	.jm-tiles {
+		.row {
+			margin: 0 -(@JMbaseSpace/2);
+		}
+		.jm-tile {
+			background: @JMcontrastBackground !important;
+			color: @JMcontrastFontColor;
+			border: 2px solid @JMcontrastFontColor;
+			img,
+			.fa, [class*='icon'] {
+				display: none;
+			}
+			&.icon {
+				padding-left: 20px;
+			}
+			
+		}
+		.jm-link {
+			a {
+				color: @JMcontrastFontColor;
+				&:hover,
+				&:focus {
+					color: @JMcontrastFontColor2;
+				}
+			}
+			
+		}
+	}
+
+	#jm-allpage .jm-category-module {
+		.mod-articles-category-title {
+			color: @JMcontrastFontColor2;
+			a {
+				&:hover,
+				&:focus {
+					color: @JMcontrastFontColor;
+				}
+			}
+		}
+	}
+
+	#jm-allpage .color-ms .jm-category-module.default {
+		.jmm-row + .jmm-row {
+			border-color: lighten(@JMcontrastBackground, 10%);
+		}
+	}
+
+	#jm-allpage .white-box-ms .jm-category-module.default {
+		.jmm-item-in {
+			background: @JMcontrastBackground2;
+		}
+		.jmm-intortext,
+		.jmm-text .mod-articles-category-date {
+			color: @JMcontrastFontColor2;
+		}
+		.mod-articles-category-title {
+			color: @JMcontrastFontColor;
+			a {
+				&:hover,
+				&:focus {
+					color: @JMcontrastFontColor2;
+				}
+			}
+		}
+	}
+
+	//vedi tutti
+	.vedi-ms {
+		a {
+			color: @JMcontrastFontColor;
+			&:hover,
+			&:focus {
+				color: @JMcontrastFontColor2;
+			}
+		}
+	}
+
+	.tagspopular,
+	.tabsimilar {
+		.tag {
+			border-color: @JMcontrastFontColor;
+			&:hover,
+			&:focus {
+				border-color: @JMcontrastFontColor2;
+			}
+			a {
+				color: inherit;
+				&:hover,
+				&:focus {
+					color: @JMcontrastFontColor2;
+				}
+			}
+		}
+	}
+
+	// MENUS.LESS
+	//------------------------------
+
+	ul.nav.menu {
+		//elements
+		li a,
+		li span.separator {
+			color: @JMcontrastFontColor;
+			&:hover,
+			&:focus {
+				color: @JMcontrastFontColor2;
+			}
+		}
+		li.current,
+		li.active {
+			> a,
+			> span.separator {
+				color: @JMcontrastFontColor2;
+			}
+		}
+	}
+	
+	#jm-header,
+	#jm-bottom3 {
+		ul.nav.menu {
+			li a,
+			li span.separator {
+				color: inherit;
+			}
+			li.current,
+			li.active {
+				> a,
+				> span.separator {
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	#jm-footer-mod,
+	#jm-footer {
+		ul.nav.menu {
+			> li {
+				border-color: lighten(@JMcontrastBackground, 10%);
+				&:first-child {
+					border-color: lighten(@JMcontrastBackground, 10%);
+				}
+			}
+			li a,
+			li span.separator {
+				color: @JMcontrastFontColor;
+			}
+			li.current,
+			li.active {
+				> a,
+				> span.separator {
+					color: @JMcontrastFontColor;
+				}
+			}
+		}
+	}
+
+	#jm-mobile-menu {
+		.jm-module-raw {
+			background: @JMcontrastBackground;
+			border-top: 1px solid @JMcontrastFontColor;
+		}
+		ul.nav.menu {
+			> li > a {
+				color: @JMcontrastFontColor;
+				&:hover,
+				&:focus {
+					color: @JMcontrastFontColor2;
+				}
+			}
+		}
+	}
+
+	// JOOMLA.LESS
+	//------------------------------
+
+	//page headings
+	h1.componentheading, //extension headings support
+	.tag-category > h1, //tag category
+	.page-header > h1, //global
+	.content-category > h1, //category-list
+	.categories-list > h1, //categories-list
+	.blog-featured > h1, //featured contacts
+	.contact-category > h1, //contact category
+	.contact > h1, //single contact
+	.newsfeed-category > h1, //newsfeed category
+	h1.page-title, //search form
+	.finder > h1, //smart search
+	.weblink-category > h1, //weblink category
+	.edit > h1, //submit weblink
+	.blog > h2 //blog category
+	{
+		color: @JMcontrastFontColor;
+	}
+
+	//singlre article
+	.item-page > .page-header > h1,
+	.item-page > .page-header > h2 {
+		color: @JMcontrastFontColor2;
+		a {
+			&:hover,
+			&:focus {
+				color: @JMcontrastFontColor;
+			}
+		}
+	}
+
+	//component headings (eg. blog)
+	h2.item-title, //featured
+	.page-header > h2, //global
+	.content-category > h2, //category-list category
+	.cat-children > h3, //category children
+	.contact-category > h2, //contact category
+	.weblink-category > h2, //weblink category
+	.newsfeed > h2, //single newsfeed
+	.newsfeed-category > h2, //newsfeed category
+	.weblink-category > h2, //weblink category
+	.contact > h3 //contact headings
+	{
+		color: @JMcontrastFontColor2;
+		a {
+			&:hover,
+			&:focus {
+				color: @JMcontrastFontColor;
+			}
+		}
+	}
+
+	//accordion etc. headings
+	h3.page-header {
+		border-color: currentColor;
+	}
+
+	//article details
+	dl.article-info {
+		color: @JMcontrastFontColor;
+	}
+
+	//article index
+	.article-index {
+		border-color: currentColor;
+		h3 {
+			color: @JMcontrastFontColor;
+		}
+	}
+
+	//category blog
+	.blog,
+	.blog-featured {
+		.blog-title {
+			.page-header {
+				background: @JMcontrastBackground;
+				> h2 {
+					color: @JMcontrastFontColor;
+				}
+			}
+			&:hover {
+				.page-header > h2 {
+					color: @JMcontrastFontColor2;
+				}
+			}
+		}
+		.item-image {
+			background: @JMcontrastBackground;
+		}
+		.item-body {
+			background: @JMcontrastBackground;
+			color: @JMcontrastFontColor2;
+			.page-header > h2,
+			h2.item-title {
+				color: @JMcontrastFontColor;
+				a {
+					&:hover,
+					&:focus {
+						color: @JMcontrastFontColor2;
+					}
+				}
+			}
+			dl.article-info {
+				color: @JMcontrastFontColor2;
+			}
+		}
+	}
+
+	//readmore
+	.readmore {
+		color: @JMcontrastFontColor;
+	}
+	
+	
+	//blog readmore
+	#jm-allpage p.readmore {
+		.btn {
+			color: @JMcontrastFontColor !important;
+		}
+	}
+	
+	.mod-articles-category-readmore a {
+		color: @JMcontrastFontColor;
+	}
+
+	//contact single category
+	ul.list-striped > li {
+		border-color: currentColor;
+	}
+
+	//registration fields star
+	strong.red,
+	span.star {
+		color: #ff0101;
+	}
+
+	//caption
+	p.img_caption {
+		background: @JMcontrastBackground;
+	}
+
+	//joomla tooltip
+	.tip-wrap {
+		.tip {
+		color: @JMcontrastBackground;
+		background-color: @JMcontrastFontColor;
+		}
+		.tip-top {
+			border-bottom-color: @JMcontrastFontColor;
+		}
+		.tip-title {
+			color: @JMcontrastBackground;
+		}
+		.tip-text {
+			color: @JMcontrastBackground;
+		}
+	}
+
+	.tooltip {
+		&.in     { .opacity(100); }
+	}
+
+	// Wrapper for the tooltip content
+	.tooltip-inner {
+		color: @JMcontrastBackground;
+		background-color: @JMcontrastFontColor;
+	}
+	.tooltip {
+		&.top .tooltip-arrow {
+			border-top-color: @JMcontrastFontColor;
+		}
+		&.right .tooltip-arrow {
+			border-right-color: @JMcontrastFontColor;
+		}
+		&.left .tooltip-arrow {
+			border-left-color: @JMcontrastFontColor;
+		}
+		&.bottom .tooltip-arrow {
+			border-bottom-color: @JMcontrastFontColor;
+		}
+	}
+
+	//joomla edit button
+	.jmodedit {
+		color: @JMcontrastFontColor2 !important;
+		&:hover {
+			color: @JMcontrastFontColor !important;
+		}
+	}
+
+	#jm-allpage .calendar-container {
+		background: @JMcontrastFontColor2 !important;
+		color: @JMcontrastBackground !important;
+		table tbody td.today:after {
+			background: @JMcontrastFontColor;
+			color: @JMcontrastBackground
+		}
+		table tbody td.selected {
+			background: darken(@JMcontrastFontColor, 5%);
+			color: @JMcontrastBackground
+		}
+		table tbody td.day:hover {
+			background: @JMcontrastFontColor;
+			color: @JMcontrastBackground
+		}
+	}
+
+	//login page
+	#jm-maincontent > div.login {
+		background: @JMcontrastBackground;
+		color: @JMcontrastFontColor;
+		label,
+		legend {
+			color: @JMcontrastFontColor;
+		}
+	}
+
+	//registration page
+	#jm-maincontent > div.registration {
+		background: @JMcontrastBackground;
+		color: @JMcontrastFontColor;
+		label,
+		legend {
+			color: @JMcontrastFontColor;
+		}
+	}
+
+	//contact page
+	#contact-form {
+		background: @JMcontrastBackground;
+		color: @JMcontrastFontColor;
+		label,
+		legend {
+			color: @JMcontrastFontColor;
+		}
+	}
+
+	// MEGAMENU.LESS
+	//------------------------------
+
+	.dj-megamenu-override li.dj-up {
+		a.dj-up_a {
+			color: @JMcontrastFontColor;
+			small.subtitle {
+				.opacity(100);
+			}
+		}
+		&.active,
+		&:hover,
+		&.hover	 {
+			a.dj-up_a {
+				color: @JMcontrastFontColor2;
+
+			}
+		}
+	}
+
+	.dj-megamenu-override.dj-megamenu-sticky {
+		background: @JMcontrastBackground;
+	}
+
+	//#jm-allpage .select-input .dj-select {
+	//	color: @JMinputFontColor;
+	//	background: @JMinputBackground;
+	//}
+
+	//first level submenu
+	.dj-megamenu-override {
+		li:hover,
+		li.hover {
+			div.dj-subwrap {
+				div.dj-subwrap-in {
+					background: @JMcontrastBackground;
+				}
+			}
+		}
+	}
+
+	.dj-megamenu-override .dj-submenu {
+		> li {
+			> a {
+				color: @JMcontrastFontColor;
+			}
+		}
+		> li:hover > a,
+		> li.hover > a,
+		> li.active > a {
+			color: @JMcontrastFontColor2;
+		}
+	}
+
+	.dj-megamenu-override .dj-subtree {
+			> li > a {
+			color: @JMcontrastFontColor;
+		}
+		> li:hover > a,
+		> li.hover > a,
+		> li.active > a {
+			color: @JMcontrastFontColor2;
+		}
+	}
+
+	.dj-megamenu-override .modules-wrap {
+		color: @JMcontrastFontColor;
+		.moduletable {
+			> h3 {
+				color: @JMcontrastFontColor2;
+			}
+		}
+	}
+
+	.dj-megamenu-override {
+		.nav.menu {
+			li a,
+			li span.separator {
+				color: @JMcontrastFontColor;
+				&:hover,
+				&:focus {
+					color: @JMcontrastFontColor2;
+				}
+			}
+			li.current,
+			li.active {
+				> a,
+				> span.separator {
+					color: @JMcontrastFontColor2;
+				}
+			}
+		}
+	}
+
+	// ------------------------------------------------
+	// BOOTSTRAP
+	//-------------------------------------------------
+
+	// SCAFFOLDING.LESS
+	//------------------------------
+
+	//links
+	a {
+		color: @JMcontrastFontColor2;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+	#jm-footer a,
+	#jm-footer-mod a {
+		color: @JMcontrastFontColor;
+	}
+
+	//selection
+	::selection {
+		background: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+	}
+	::-webkit-selection {
+		background: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+	}
+	::-moz-selection {
+		background: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+	}
+
+	.img-polaroid {
+		background-color: @JMcontrastFontColor;
+		border-color: @JMcontrastFontColor;
+	}
+
+	// TYPE.LESS
+	//------------------------------
+
+	// Utility classes
+	.muted               { color: @JMcontrastFontColor; }
+	a.muted:hover,
+	a.muted:focus        { color: @JMcontrastFontColor; }
+
+	.text-warning        { color: @JMlinkFocusColor; }
+	a.text-warning:hover,
+	a.text-warning:focus { color: @JMlinkFocusColor; }
+
+	.text-error          { color: @JMlinkFocusColor; }
+	a.text-error:hover,
+	a.text-error:focus   { color: @JMlinkFocusColor; }
+
+	.text-info           { color: @JMlinkFocusColor; }
+	a.text-info:hover,
+	a.text-info:focus    { color: @JMlinkFocusColor; }
+
+	.text-success        { color: @JMlinkFocusColor; }
+	a.text-success:hover,
+	a.text-success:focus { color: @JMlinkFocusColor; }
+
+	//headings
+	h1, h2, h3, h4, h5, h6 {
+		color: @JMcontrastFontColor;
+	}
+
+	blockquote {
+		border-color: @JMcontrastFontColor;
+		small {
+			color: @JMcontrastFontColor2;
+		}
+	}
+
+	// LABELS-BADGES.LESS
+	//------------------------------
+
+	.label, .badge {
+		color: @JMcontrastBackground;
+		background-color: @JMcontrastFontColor;
+		border: none;
+		text-shadow: none;
+	}
+
+	.badge-info {
+		color: @JMcontrastBackground;
+		background-color: @JMcontrastFontColor;
+	}
+
+	//article tags
+	.tags .label {
+		border-color: @JMcontrastFontColor;
+		color: @JMcontrastFontColor !important;
+		&:hover,
+		&:focus {
+			border-color: @JMcontrastFontColor2;
+			color: @JMcontrastFontColor2 !important;
+			background: none;
+		}
+	}
+
+	// BUTTONS.LESS
+	//------------------------------
+
+	.btn {
+		color: @JMcontrastBackground;
+		background: @JMcontrastFontColor2;
+		&:hover,
+		&:focus,
+		&:active {
+			color: @JMcontrastBackground;
+			background: @JMcontrastFontColor;
+		}
+	}
+	
+	a.button,
+	input.button,
+	button.button,
+	input[type="submit"],
+	button[type="submit"],
+	input[type="reset"],
+	button[type="reset"] {
+		.btn();
+	}
+
+	#jm-logo-nav,
+	#jm-header,
+	#jm-bottom3,
+	#jm-footer-mod {
+		.btn,
+		a.button,
+		input.button,
+		button.button,
+		input[type="submit"],
+		button[type="submit"],
+		input[type="reset"],
+		button[type="reset"] {
+			color: @JMcontrastBackground;
+			background: @JMcontrastFontColor2;
+			&:hover,
+			&:focus {
+				color: @JMcontrastBackground;
+				background: @JMcontrastFontColor;
+			}
+		}
+	}
+
+	a.btn,
+	a.button {
+		color: @JMcontrastBackground !important;
+		text-decoration: none;
+	}
+
+	// DROPDOWNS.LESS
+	//------------------------------
+
+	//dropdown
+	.dropdown-menu {
+		background: @JMcontrastBackground;
+		border-color: @JMcontrastFontColor;
+		a {
+			color: @JMcontrastFontColor2;
+			&:hover,
+			&:focus {
+				color: @JMcontrastBackground;
+				[class^="icon-"], [class*=" icon-"] {
+					color: @JMcontrastBackground;
+				}
+			}
+		}
+	}
+
+	//caret
+	.caret {
+		border-top-color: @JMcontrastBackground;
+	}
+	.btn {
+		&:hover,
+		&:focus,
+		.active,
+		.open	{
+			.caret {
+				border-top-color: @JMcontrastFontColor;
+			}
+		}
+	}
+
+	// FORMS.LESS
+	//------------------------------
+
+	legend {
+		color: inherit;
+	}
+
+	label {
+		color: inherit;
+	}
+
+	// TABLES.LESS
+	//------------------------------
+
+	table {
+		background-color: none;
+	}
+
+	.table,
+	table.category
+	{
+		th,
+		td {
+			border-color: @JMcontrastFontColor;
+		}
+		th {
+			background: @JMcontrastFontColor;
+			color: @JMcontrastBackground;
+			a {
+				color: @JMcontrastBackground;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		td {
+			background: none;
+		}
+	}
+
+	// PAGINATION.LESS
+	//------------------------------
+
+	.pagination ul > li > a,
+	.pagination ul > li > span {
+		background: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+	}
+
+	.pagination ul > li.active > a,
+	.pagination ul > li > span.pagenav {
+		background: @JMcontrastFontColor2;
+		color: @JMcontrastBackground;
+	}
+
+	.pagination {
+		ul li.pagination-start span.pagenav,
+		ul li.pagination-prev span.pagenav,
+		ul li.pagination-next span.pagenav,
+		ul li.pagination-end span.pagenav {
+			color: inherit;
+			background: none;
+		}
+	}
+
+	.pagination {
+		ul li.pagination-start a,
+		ul li.pagination-prev a,
+		ul li.pagination-next a,
+		ul li.pagination-end a {
+			background: none;
+			color: @JMcontrastFontColor2;
+			&:hover,
+			&:focus {
+				background: none;
+			}
+		}
+	}
+
+	// NAVS.LESS
+	//------------------------------
+
+	.nav-tabs > li,
+	dl.tabs > dt {
+		border: none;
+		background: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+		&:hover,
+		&:focus {
+			background: @JMcontrastFontColor2;
+			color: @JMcontrastBackground;
+		}
+	}
+
+	.nav-tabs > li.active,
+	dl.tabs > dt.open {
+		background: @JMcontrastFontColor2;
+		color: @JMcontrastBackground;
+	}
+
+	.nav-tabs > li > a,
+	dl.tabs > dt a {
+		color: inherit;
+	}
+
+	dd.tabs,
+	.tab-content {
+		background: @JMcontrastBackground;
+		color: @JMcontrastFontColor;
+	}
+
+	.nav-tabs.nav-stacked > li {
+		border: none;
+		background: none;
+		> a {
+			color: @JMcontrastFontColor;
+		}
+	}
+
+	// ACCORDION.LESS
+	//------------------------------
+
+	.accordion-heading .accordion-toggle,
+	.pane-sliders h3.title a {
+		background: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+		&:focus,
+		&:hover {
+			background: @JMcontrastFontColor2;
+			color: @JMcontrastBackground;
+		}
+	}
+
+	.accordion-inner,
+	.pane-slider {
+		background: @JMcontrastBackground;
+		color: @JMcontrastFontColor;
+	}
+
+	// OTHER BOOTSTRAP
+	//------------------------------
+
+	//finder
+	span.highlight {
+		color: @JMcontrastBackground;
+		background-color: @JMcontrastFontColor2;
+	}
+
+	//alerts
+	.alert {
+		background-color: @JMcontrastFontColor;
+		border-color: @JMcontrastFontColor;
+		text-shadow: none;
+	}
+	.alert,
+	.alert h4 {
+		// Specified for the h4 to prevent conflicts of changing @headingsColor
+		color: @JMcontrastBackground;
+		a {
+			color: inherit;
+		}
+	}
+	.alert-success {
+		background-color: @JMcontrastFontColor;
+		border-color: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+	}
+	.alert-success h4 {
+		color: @JMcontrastBackground;
+	}
+	.alert-danger,
+	.alert-error {
+		background-color: @JMcontrastFontColor;
+		border-color: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+	}
+	.alert-danger h4,
+	.alert-error h4 {
+		color: @JMcontrastBackground;
+	}
+	.alert-info {
+		background-color: @JMcontrastFontColor;
+		border-color: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+	}
+	.alert-info h4 {
+		color: @JMcontrastBackground;
+	}
+
+	//pre
+	pre {
+		background: @JMcontrastBackground;
+		border-color: @JMcontrastFontColor2;
+		color: @JMcontrastFontColor;
+	}
+
+	.popover {
+		border: none;
+		background: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+		.popover-title {
+			border: none;
+			background: @JMcontrastFontColor;
+			color: @JMcontrastBackground;
+		}
+		&.right .arrow:after {
+			border-right-color: @JMcontrastFontColor;
+		}
+	}
+
+	// EDITOR.LESS
+	//------------------------------
+
+	h3.jm-typo-title {
+		border-color: @JMcontrastFontColor;
+	}
+
+	.jm-color {
+		color: @JMcontrastFontColor2;
+	}
+	.jm-block span {
+		background: @JMcontrastFontColor;
+		color: @JMcontrastBackground;
+	}
+	.jm-block.second span {
+		background: @JMcontrastFontColor2;
+	}
+	p,
+	span {
+		&.jmbadge {
+			background-image: url("../images/icons/white/badge.png");
+		}
+		&.jmcalendar {
+			background-image: url("../images/icons/white/calendar.png");
+		}
+		&.jmchat {
+			background-image: url("../images/icons/white/chat.png");
+		}
+		&.jmcheck {
+			background-image: url("../images/icons/white/check.png");
+		}
+		&.jmcloud {
+			background-image: url("../images/icons/white/cloud.png");
+		}
+		&.jmdirection {
+			background-image: url("../images/icons/white/direction.png");
+		}
+		&.jmdivide {
+			background-image: url("../images/icons/white/divide.png");
+		}
+		&.jmerror {
+			background-image: url("../images/icons/white/error.png");
+		}
+		&.jmfire {
+			background-image: url("../images/icons/white/fire.png");
+		}
+		&.jmflag {
+			background-image: url("../images/icons/white/flag.png");
+		}
+		&.jmheart {
+			background-image: url("../images/icons/white/heart.png");
+		}
+		&.jmhome {
+			background-image: url("../images/icons/white/home.png");
+		}
+		&.jminfo {
+			background-image: url("../images/icons/white/info.png");
+		}
+		&.jmlist {
+			background-image: url("../images/icons/white/list.png");
+		}
+		&.jmmail {
+			background-image: url("../images/icons/white/mail.png");
+		}
+		&.jmpeople {
+			background-image: url("../images/icons/white/people.png");
+		}
+		&.jmstar {
+			background-image: url("../images/icons/white/star.png");
+		}
+		&.jmstat {
+			background-image: url("../images/icons/white/stat.png");
+		}
+	}
+
+	// DJTABS
+	//------------------------------
+
+	#jm-allpage .djtabs.default-theme {
+		.djtabs-title {
+			border: none !important;
+			background: @JMcontrastFontColor;
+			color: @JMcontrastBackground;
+		}
+		.djtabs-title:hover,
+		.djtabs-active-wrapper .djtabs-title {
+			background: @JMcontrastFontColor2;
+			color: @JMcontrastBackground;
+		}
+		.djtabs-in {
+			background: @JMcontrastBackground;
+			color: @JMcontrastFontColor;
+		}
+		.djtabs-panel {
+			.djtabs-panel-title {
+				color: @JMcontrastFontColor2;
+			}
+		}
+		.djtabs-panel > span.djtabs-panel-toggler {
+			color: @JMcontrastFontColor2;
+		}
+		.djtabs-article-content {
+			a {
+				color: @JMcontrastFontColor2;
+			}
+		}
+		.djtabs-article-author,
+		.djtabs-article-category {
+			a {
+				color: @JMcontrastFontColor2;
+			}
+		}
+		.djtabs-readmore {
+			a {
+				color: @JMcontrastFontColor2;
+			}
+		}
+	}
+
+	// DJMEDIATOOLS
+	//------------------------------
+
+	.dj-cat-title {
+		color: @JMcontrastFontColor2;
+	}
+
+	.dj-slide-desc-text {
+		background: @JMcontrastBackground !important;
+		color: @JMcontrastFontColor2 !important;
+	}
+
+	.dj-slide-title {
+		color: @JMcontrastFontColor !important;
+		a {
+			&:hover {
+				color: @JMcontrastFontColor2 !important;
+			}
+		}
+	}
+
+	#jm-allpage .dj-readmore-wrapper {
+		.dj-readmore {
+			color: @JMcontrastFontColor !important;
+			&:hover,
+			&:focus {
+				color: @JMcontrastFontColor2 !important;
+			}
+		}
+	}
+
+	#djmediatools .dj-categories {
+		a.dj-category,
+		a.dj-category:hover {
+			color: @JMcontrastFontColor;
+		}
+		.dj-ctitle-bg {
+			background: @JMcontrastBackground;
+			.opacity(100) !important;
+		}
+		.dj-ctitle-in {
+			color: @JMcontrastFontColor2 !important;
+		}
+		.dj-ctitle-in:hover {
+			color: @JMcontrastFontColor !important;
+		}
+	}
+
+	.load-button,
+	.dj-load-button {
+		background: @JMcontrastBackground !important;
+	}
+	.dj-load-button .dj-key {
+		color: @JMcontrastFontColor2 !important;
+	}
+
+	.dj-mslider {
+		.dj-load-button {
+			border-color: @JMcontrastFontColor2 !important;
+		}
+		.dj-load-button.dj-load-button-active {
+			background: @JMcontrastFontColor2 !important;
+		}
+	}
+
+	.djslider-loader {
+		.load-button {
+			border-color: @JMcontrastFontColor2 !important;
+		}
+		.load-button.load-button-active {
+			background: @JMcontrastFontColor2 !important;
+		}
+	}
+
+	.dj-slideshow {
+		.dj-load-button-active .dj-key,
+		.dj-load-button:hover .dj-key {
+			color: @JMcontrastBackground !important;
+		}
+		.dj-load-button-active,
+		.dj-load-button:hover {
+			background: @JMcontrastFontColor !important;
+		}
+	}
+	
+	#jm-logo-nav,
+	#jm-header,
+	#jm-bottom3 {
+		.dj-slideshow {
+			.dj-load-button-active .dj-key,
+			.dj-load-button:hover .dj-key {
+				color: @JMcontrastBackground !important;
+			}
+			.dj-load-button-active,
+			.dj-load-button:hover {
+				background: @JMcontrastFontColor !important;
+			}
+		}
+	}
+
+	.dj-tabber {
+		.dj-tab-active img,
+		.dj-tab img {
+			background: @JMcontrastFontColor;
+		}
+		.dj-tab-active {
+			background: @JMcontrastFontColor2 !important;
+		}
+		.dj-tab {
+			background: @JMcontrastBackground !important;
+			border: none !important;
+		}
+		span.dj-tab-in {
+			color: @JMcontrastFontColor !important;
+		}
+		.dj-tabs-left .dj-tab.dj-tab-active,
+		.dj-tabs-right .dj-tab.dj-tab-active {
+			background: @JMcontrastFontColor2 !important;
+			span.dj-tab-in {
+				color: @JMcontrastBackground !important;
+			}
+		}
+	}
+
+	.skitter {
+		.label_skitter {
+			color: @JMcontrastFontColor !important;
+		}
+		.label_skitter p {
+			color: @JMcontrastFontColor;
+		}
+		//numbers
+		.info_slide_dots {
+			.image_number {
+				color: @JMcontrastFontColor2;
+				background: @JMcontrastBackground;
+			}
+			.image_number.image_number_select,
+			.image_number:hover {
+				color: @JMcontrastBackground;
+				background: @JMcontrastFontColor;
+			}
+		}
+	}
+	
+	#jm-logo-nav,
+	#jm-header,
+	#jm-bottom3 {
+		.skitter {
+			.info_slide_dots {
+				.image_number.image_number_select,
+				.image_number:hover {
+					color: @JMcontrastBackground;
+					background: @JMcontrastFontColor;
+				}
+			}
+		}
+	}
+
+	#jm-allpage .slider-wrapper .nivo-controlNav {
+		a {
+			color: @JMcontrastBackground !important;
+			background: @JMcontrastFontColor2 !important;
+			&.active,
+			&:hover {
+				color: @JMcontrastBackground !important;
+				background: @JMcontrastFontColor !important;
+			}
+		}
+	}
+
+	#jm-allpage .dj-masonry {
+		.dj-slide-desc-in {
+			background: @JMcontrastBackground !important;
+			color: @JMcontrastFontColor !important;
+		}
+	}
+
+	#jm-allpage .navi-ms {
+		.djslider-loader,
+		.dj-mslider {
+			img.prev-button,
+			img.next-button,
+			img.play-button,
+			img.pause-button,
+			.dj-prev,
+			.dj-next,
+			.dj-play,
+			.dj-pause {
+				background-color: @JMcontrastBackground;
+			}
+		}
+	}
+
+// END FUNCTION WRAPPER
+}
+
+//prepare styles
+
+// HIGH CONTRAST 1 (black - white)
+body.highcontrast {
+	.fncontrast(@JMhcFontColor, @JMhcFontColor2, @JMhcBackground, @JMhcBackground2);
+}
+
+// HIGH CONTRAST 2 (black - yellow)
+body.highcontrast2 {
+	.fncontrast(@JMhc2FontColor, @JMhc2FontColor2, @JMhc2Background, @JMhc2Background2);
+}
+
+// HIGH CONTRAST 3 (yellow - black)
+body.highcontrast3 {
+	.fncontrast(@JMhc3FontColor, @JMhc3FontColor2, @JMhc3Background, @JMhc3Background2);
+	#jm-back-top a {
+		color: @JMhc3Background;
+		background-color: @JMhc3FontColor;
+	}
+
+	p,
+	span {
+		&.jmbadge {
+			background-image: url("../images/icons/badge.png");
+		}
+		&.jmcalendar {
+			background-image: url("../images/icons/calendar.png");
+		}
+		&.jmchat {
+			background-image: url("../images/icons/chat.png");
+		}
+		&.jmcheck {
+			background-image: url("../images/icons/check.png");
+		}
+		&.jmcloud {
+			background-image: url("../images/icons/cloud.png");
+		}
+		&.jmdirection {
+			background-image: url("../images/icons/direction.png");
+		}
+		&.jmdivide {
+			background-image: url("../images/icons/divide.png");
+		}
+		&.jmerror {
+			background-image: url("../images/icons/error.png");
+		}
+		&.jmfire {
+			background-image: url("../images/icons/fire.png");
+		}
+		&.jmflag {
+			background-image: url("../images/icons/flag.png");
+		}
+		&.jmheart {
+			background-image: url("../images/icons/heart.png");
+		}
+		&.jmhome {
+			background-image: url("../images/icons/home.png");
+		}
+		&.jminfo {
+			background-image: url("../images/icons/info.png");
+		}
+		&.jmlist {
+			background-image: url("../images/icons/list.png");
+		}
+		&.jmmail {
+			background-image: url("../images/icons/mail.png");
+		}
+		&.jmpeople {
+			background-image: url("../images/icons/people.png");
+		}
+		&.jmstar {
+			background-image: url("../images/icons/star.png");
+		}
+		&.jmstat {
+			background-image: url("../images/icons/stat.png");
+		}
+	}
+}

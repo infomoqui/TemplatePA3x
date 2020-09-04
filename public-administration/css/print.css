@@ -1,0 +1,121 @@
+/*--------------------------------------------------------------
+# Copyright (C) joomla-monster.com
+# License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+# Website: http://www.joomla-monster.com
+# Support: info@joomla-monster.com
+---------------------------------------------------------------*/
+
+/* ==========================================================================
+   PRINT PAGE styles
+   ========================================================================== */
+
+body.contentpane {
+    line-height: 18px;
+    margin: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 10px !important;
+    background: #fff!important;
+}
+
+dd, dt, dl {
+    margin: 0;
+}
+
+dl.article-info {
+    margin: 10px 0;
+}
+
+dt.article-info-term {
+    font-weight: bold;
+}
+
+.article-info dd {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+ul.actions li {
+    background: none;
+    text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px 0px 5px 0px;
+    line-height: 120%;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+h5 {
+    font-size: 12px;
+}
+
+h6 {
+    font-size: 11px;
+}
+
+h1.componentheading {
+	margin: 0 0 20px;
+}
+
+p {
+    margin: 5px 0px;
+    padding: 0px;
+}
+
+ul {
+    margin: 5px 0;
+    padding: 0;
+    list-style: square inside;
+}
+
+ul li {
+    margin: 0 0 0 3px;
+}
+
+a:link, a:visited {
+    color: #0088CC;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img {
+    border: none;
+}
+
+.contentpane .btn,
+.contentpane .btn a {
+    text-decoration: none!important;
+}
+ 
+/* MEDIATOOLS */
+
+#djmediatools .djmt_comments {
+  margin: 30px 0 0;
+}
+
+#djmediatools .dj-album-title {
+	color: #4d4d4d;
+	text-transform: uppercase;
+}
+
+

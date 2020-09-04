@@ -1,0 +1,1126 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// BOOTSTRAP STYLES
+//---------------------------------------------------------------
+
+// media.less
+// --------------------------
+
+.media-list > li {
+	background: none;
+	padding: 0;
+}
+
+// sprites.less
+// --------------------------
+
+//button icons
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+	height: @baseLineHeight;
+	line-height: @baseLineHeight;
+	vertical-align: top;
+	padding: 0 2px;
+}
+
+// thumbnails.less
+// --------------------------
+
+.thumbnails > li {
+	background: none;
+	padding: 0;
+}
+
+// chosen script
+// --------------------------
+
+.chzn-container {
+	li {
+		background: none;
+	}
+}
+
+.chzn-container-multi .chzn-choices li.search-field input[type="text"] {
+	height: 25px !important;
+}
+
+//chzn
+#jm-allpage {
+	.chzn-container-single .chzn-single,
+	.chzn-container-multi .chzn-choices {
+		line-height: @JMinputHeight;
+		height: @JMinputHeight;
+		font-size: @JMinputFontSize;
+		padding: 0 @JMinputPadding;
+		vertical-align: middle;
+		border: 1px solid @JMinputBorder;
+		color: @JMinputFontColor;
+		background: @JMinputBackground;
+		.box-shadow(none);
+		.border-radius(0);
+		.box-sizing(border-box);
+	}
+	.chzn-container-single .chzn-single div {
+		left: auto;
+		right: 8px;
+		width: 15px;
+	}
+	.chzn-container .chzn-drop {
+		border: 1px solid @JMinputBorder;
+		background: @JMinputBackground;
+		.border-radius(0);
+		.box-shadow(none);
+	}
+	.chzn-container-multi .chzn-choices .search-field input.default {
+		font-family: inherit;
+		color: @JMinputFontColor;
+		padding: 0;
+		margin: 0;
+		height: @JMinputHeight;
+	}
+	.chzn-container-single .chzn-single div b {
+		margin-top: 14px;
+	}
+	.chzn-container-multi .chzn-choices .search-choice {
+		line-height: 24px;
+		border: 1px solid @JMinputBorder;
+		background: @JMinputBackground;
+		span {
+			font-size: 14px;
+		}
+	}
+	.chzn-container-multi .chzn-choices .search-choice .search-choice-close {
+		top: 10px;
+	}
+	.chzn-choices li,
+	.chzn-results li {
+		background-image: none!important;
+	}
+	.chzn-container .chzn-results {
+		padding-top: 4px;
+		li.highlighted {
+			background: @JMstyle;
+		}
+	}
+}
+
+// JOOMLA COMPONENT
+//---------------------------------------------------------------
+
+//page headings
+h1.componentheading, //extension headings support
+.tag-category > h1, //tag category
+.page-header > h1, //global
+.content-category > h1, //category-list
+.categories-list > h1, //categories-list
+.blog-featured > h1, //featured contacts
+.contact-category > h1, //contact category
+.contact > h1, //single contact
+.newsfeed-category > h1, //newsfeed category
+h1.page-title, //search form
+.finder > h1, //smart search
+.weblink-category > h1, //weblink category
+.edit > h1, //submit weblink
+.blog > h2 //blog category
+{
+	font-size: @JMcomponentHeadingFontSize;
+	font-family: @JMcomponentHeadingFontFamily;
+	font-weight: @JMcomponentHeadingFontWeight;
+	line-height: 1.1;
+	margin: 0 0 @JMbaseSpace;
+	color: @JMarticleTitleColor;
+}
+
+//singlre article
+.item-page > .page-header > h1,
+.item-page > .page-header > h2 {
+	font-size: @JMarticleTitleFontSize;
+	font-family: @JMarticleTitleFontFamily;
+	font-weight: @JMarticleTitleFontWeight;
+	line-height: 1.1;
+	margin: 0 0 10px;
+	color: @JMarticleTitleColor;
+	a {
+		color: inherit;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: @JMarticleTitleFontColorHover;
+		}
+	}
+}
+
+//component headings (eg. blog)
+h2.item-title, //featured
+.page-header > h2, //global
+.content-category > h2, //category-list category
+.cat-children > h3, //category children
+.contact-category > h2, //contact category
+.weblink-category > h2, //weblink category
+.newsfeed > h2, //single newsfeed
+.newsfeed-category > h2, //newsfeed category
+.weblink-category > h2, //weblink category
+.contact > h3 //contact headings
+{
+	font-size: @JMblogTitleFontSize;
+	font-family: @JMblogTitleFontFamily;
+	font-weight: @JMblogTitleFontWeight;
+	line-height: 1.1;
+	margin: 0 0 20px;
+	color: @JMarticleTitleColor;
+	a {
+		color: inherit;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: @JMblogTitleFontColorHover;
+		}
+	}
+}
+
+//accordion etc. headings
+h3.page-header {
+	font-size: 1em;
+	line-height: @JMbaseLineHeight;
+	display: inline-block;
+	width: 100%;
+	border-bottom: 1px solid @JMborder;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	> .btn-mini {
+		padding: 3px 6px;
+		[class^="icon-"],
+		[class*=" icon-"] {
+			margin-top: 0;
+		}
+	}
+	> .badge {
+		margin: 0 5px;
+		vertical-align: middle;
+	}
+}
+
+.page-header + div {
+	margin-top: @JMbaseSpace;
+}
+
+//article dropdown
+.icons .btn.dropdown-toggle {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: auto;
+}
+
+//hides severals labels in Joomla
+.element-invisible {
+	display: none !important;
+}
+
+//article details
+dl.article-info {
+	color: @JMarticleInfoFontColor;
+	margin: 0 0 @JMbaseSpace;
+	font-size: 1em;
+	line-height: 1.2;
+	dd {
+		display: inline-block;
+		margin: 0 5px 0 0;
+		line-height: 1.1;
+		[class^="icon-"], [class*=" icon-"] {
+			display: none;
+		}
+	}
+	~ dl.article-info {
+		margin: 0;
+	}
+}
+
+.article-info-term {
+	display: none;
+}
+
+//article index
+.article-index {
+	border: 1px solid @JMborder;
+	padding: 20px;
+	margin-left: @JMbaseSpace;
+	h3 {
+		font-weight: @JMmoduleTitleFontWeight;
+		font-family: @JMmoduleTitleFontFamily;
+		font-size: @JMmoduleTitleFontSize;
+		line-height: 1.1;
+		margin: 0 0 20px;
+		color: @JMmoduleTitleFontColor;
+	}
+	ul {
+		padding: 0;
+		min-width: 120px;
+		li {
+			display: block;
+			position: relative;
+			padding: 0;
+			a {
+				display: block;
+			}
+		}
+	}
+}
+
+//rating and voting
+.content_rating {
+	margin-bottom: 10px;
+	clear: both;
+	img {
+		margin: 0;
+	}
+}
+
+.content_vote {
+	label {
+		margin-right: 5px;
+	}
+}
+
+//categories
+.categories-list {
+	.collapse {
+		padding: 0 0 0 @JMbaseSpace;
+	}
+}
+
+//archived articles
+#archive-items .createdby {
+	margin: 0 0 15px;
+}
+
+//category blog
+.blog,
+.blog-featured {
+	.items-container {
+		margin: -@JMbaseSpace -(@JMbaseSpace /2) 0;
+		overflow: hidden;
+	}
+	.row-fluid {
+		margin: 0;
+	}
+	.item {
+		margin-top: @JMbaseSpace;
+	}
+	.blog-title {
+		text-decoration: none;
+		span {
+			display: block;
+		}
+		.page-header {
+			overflow: hidden;
+			background: @JMblogBackground;
+			padding: 0 48px;
+		}
+		&:hover {
+			.page-header > h2 {
+				color: @JMstyle;
+			}
+		}
+	}
+	.item-image {
+		background: @JMblogBackground;
+		padding: 0 0 40px;
+	}
+	.item-body {
+		padding: 0 48px 40px;
+		background: @JMblogBackground;
+		color: @JMblogFontColor;
+		.page-header > h2,
+		h2.item-title {
+			color: @JMblogTitleFontColor;
+			a {
+				color: inherit;
+				&:hover,
+				&:focus {
+					color: @JMstyle;
+				}
+			}
+		}
+		dl.article-info {
+			color: inherit;
+		}
+	}
+}
+
+//article separator
+.items-leading div[class*="leading-"],
+.items-row .item {
+	.cf();
+}
+
+.items-leading {
+	margin: -@JMbaseSpace 0 @JMbaseSpace;
+}
+
+.items-leading div[class*="leading-"] {
+	margin-top: @JMbaseSpace;
+}
+
+
+.items-more,
+.content-links {
+	margin: 0 0 @JMbaseSpace;
+}
+
+//article image
+.item-image {
+	max-width: 100%;
+}
+
+.item-page {
+	.item-image {
+		margin: 0 0 30px;
+	}
+}
+
+figure.pull-left,
+figure.pull-right,
+figure.pull-center {
+	max-width: 100%;
+}
+
+.pull-none.item-image {
+	text-align: center;
+}
+
+.pull-left.item-image,
+figure.pull-left {
+	margin-right: @JMbaseSpace;
+}
+
+.pull-right.item-image,
+figure.pull-right {
+	margin-left: @JMbaseSpace;
+}
+
+.pull-center {
+	text-align: center;
+}
+
+.category-desc {
+	margin: 0 0 @JMbaseSpace;
+}
+
+//image caption
+div.img_caption {
+	margin: 0 auto;
+}
+
+p.img_caption {
+	text-align: center;
+	background: @grayLighter;
+	padding: 5px;
+	margin: 0;
+}
+
+//readmore
+.readmore {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	.transition(all 0.2s ease-in);
+	color: @JMreadmoreFontColor;
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+
+//blog readmore
+#jm-allpage p.readmore {
+	margin: @JMbaseSpace 0 0;
+	display: block;
+	text-align: left;
+	.btn {
+		background: none;
+		padding: 0;
+		text-transform: none;
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: 400;
+		text-align: left;
+		.readmore();
+	}
+}
+
+.mod-articles-category-readmore a {
+	.readmore();
+}
+
+//hide readmore icon
+p.readmore a.btn .icon-chevron-right {
+	display: none;
+}
+
+//archived articles
+.archive .filters {
+	margin-bottom: @JMbaseSpace;
+}
+
+//featured contact
+fieldset.filters {
+	margin: 0 0 20px;
+}
+
+//contact categories
+.categories-list ul li {
+	h4 {
+		font-size: 1em;
+		line-height: @JMbaseLineHeight;
+		font-weight: bold;
+	}
+	small.category-desc {
+		font-size: 1em;
+		line-height: @JMbaseLineHeight;
+	}
+}
+
+//contact single category
+ul.list-striped > li {
+	background: none;
+	border-bottom: 1px solid @JMborder;
+	padding: 10px;
+}
+
+//weblinks single category
+.weblink-count {
+	display: inline-block;
+	width: 100%;
+	dt,
+	dd {
+		float: left;
+	}
+}
+
+//single news feed
+.newsfeed > ol > li > h3 {
+	font-size: 1em;
+}
+
+.newsfeed-count {
+	dd, dt {
+		display: inline-block;
+	}
+}
+
+//registration fields star
+strong.red,
+span.star {
+	color: #df0000;
+}
+
+//user profile
+.profile {
+	ul.btn-toolbar li {
+		background: none;
+		padding: 0;
+	}
+	.btn-toolbar + fieldset {
+		clear: both;
+	}
+}
+
+//single contact
+.contact {
+	.contact-form {
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			width: 100%;
+			max-width: 400px;
+		}
+	}
+	dl.contact-address {
+		margin: @JMbaseSpace 0;
+	}
+	.thumbnail {
+		border: none;
+		.box-shadow(none);
+	}
+}
+
+//search component
+.phrases-box,
+	fieldset.only {
+		padding: 0 0 20px;
+		label {
+		display: inline-block;
+		margin-right: 10px;
+	}
+}
+
+.btn {
+	.icon-search.icon-white {
+		color: inherit;
+	}
+}
+
+fieldset.phrases {
+	padding-bottom: 20px;
+}
+
+//tagged items
+.tag-category .category {
+	li + li {
+		margin: @JMbaseSpace 0 0;
+	}
+	> li > h3 {
+		font-size: 1em;
+		margin: 0 0 20px;
+	}
+}
+
+//tag-category
+.tag-category {
+	.form-inline label {
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	> h2 {
+		margin-bottom: @JMbaseSpace;
+	}
+	form > ul > li > h3 {
+		margin-bottom: @JMbaseSpace;
+	}
+	form > ul > li {
+		padding: 0;
+		background: none!important;
+	}
+	.tag-body {
+		margin: @JMbaseSpace 0;
+		display: block;
+	}
+	.thumbnails > li,
+	.category > li {
+		background: none;
+		padding: 0;
+	}
+	.thumbnails > li h3 {
+		font-size: 1em;
+	}
+}
+
+//joomla tooltip
+body .tip-wrap {
+	.tip {
+	max-width: 300px;
+	padding: 3px 8px;
+	color: @tooltipColor;
+	text-align: center;
+	text-decoration: none;
+	background: none;
+	background-color: @tooltipBackground;
+	.border-radius (@baseBorderRadius);
+	font-weight: normal;
+	z-index: 9999;
+	.opacity(100);
+	.box-shadow(none);
+	border: none;
+	}
+	.tip-top {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		top: -@tooltipArrowWidth;
+		left: 50%;
+		margin-left: -@tooltipArrowWidth;
+		border-width: 0 @tooltipArrowWidth @tooltipArrowWidth;
+		border-bottom-color: @tooltipArrowColor;
+		.opacity(80);
+	}
+	.tip-title {
+		font-weight: bold;
+		color: @tooltipColor;
+
+	}
+	.tip-text {
+		font-weight: normal;
+		color: @tooltipColor;
+	}
+}
+
+label.hasTooltip,
+label.hasPopover {
+	display: inline-block !important;
+}
+
+//joomla edit button
+.jmodedit {
+	z-index: 9999;
+	line-height: 1 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none !important;
+	color: @JMstyle !important;
+	&:hover {
+		color: jmdarken(@JMstyle, 10%) !important;
+	}
+}
+
+//calendar
+.calendar table {
+	border-collapse: separate;
+}
+
+.js-calendar {
+	.btn-group {
+		.btn {
+			padding: 5px;
+			font-size: 15px;
+		}
+	}
+}
+
+//global calendar popup
+#jm-allpage .calendar-container {
+	color: #444;
+	.buttons-wrapper {
+		display: block;
+		text-align: center;
+		.btn {
+			padding:2px 10px;
+			margin: 0 3px;
+		}
+	}
+	table tbody td.today:after {
+		background: @JMstyle;
+	}
+	table tbody td.selected {
+		background: darken(@JMstyle, 5%);
+	}
+	table tbody td.day:hover {
+		background: @JMstyle;
+	}
+}
+
+//template options
+.jm-alert {
+	display: block;
+}
+
+#templates-form .form-horizontal .control-label {
+	float: none;
+	width: auto;
+	text-align: inherit;
+}
+
+#templates-form .form-horizontal .controls {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+//color picker
+#jm-allpage .minicolors-theme-bootstrap .minicolors-input {
+	line-height: 1.5;
+	height: auto;
+	width: auto;
+}
+
+//login page
+#jm-maincontent > div.login,
+#jm-maincontent > div.login + div {
+	overflow: auto;
+	max-width: 50%;
+	margin: 0 auto;
+	padding: 0 120px;
+	.box-sizing(border-box);
+	@media (max-width: 1200px) {
+		max-width: 100%;
+		padding: 0 30px;
+	}
+}
+
+#jm-maincontent > div.login {
+	padding-top: 48px;
+	padding-bottom: 48px;
+	background: @JMblogBackground;
+	color: @JMblogFontColor;
+	label,
+	legend {
+		color: @JMblogTitleFontColor;
+	}
+	form {
+		margin: 0;
+		input[type='text'],
+		input[type='password'] {
+			width: 100%;
+		}
+		.btn {
+			display: block;
+			width: 100%;
+		}
+	}
+	.form-horizontal {
+		.control-label {
+			float: none;
+			width: auto;
+			text-align: left;
+			padding: 0 0 10px;
+		}
+		.controls {
+			margin: 0;
+		}
+		.control-group.login-remember {
+			.control-label, .controls {
+				display: inline-block;
+				vertical-align: top;
+			}
+			label {
+				margin: 0;
+			}
+			#remember {
+				vertical-align: text-top;
+			}
+		}
+	}
+}
+
+#jm-maincontent > div.login + div {
+	padding: 0 30px;
+	.nav-stacked {
+		padding-top: 15px;
+		text-align: center;
+		> li {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 15px;
+		}
+	}
+}
+
+//registration page
+#jm-maincontent > div.registration {
+	background: @JMblogBackground;
+	color: @JMblogFontColor;
+	padding: 48px 33px;
+	label,
+	legend {
+		color: @JMblogTitleFontColor;
+	}
+	#member-registration {
+		overflow: auto;
+	}
+	#member-registration > fieldset,
+	#member-registration > .control-group {
+		float: left;
+		width: 50%;
+		padding: 0 15px;
+		.box-sizing(border-box);
+	}
+	#member-registration > .control-group {
+		width: 100%;
+		> .controls {
+			margin: 30px 0 0;
+			text-align: center;
+		}
+	}
+}
+
+//contact page
+#contact-form {
+	background: @JMblogBackground;
+	color: @JMblogFontColor;
+	padding: 48px;
+	margin: 0;
+	label,
+	legend {
+		color: @JMblogTitleFontColor;
+	}
+}
+
+#jm-allpage .contact-ps {
+	.page-header {
+		display: none;
+	}
+	h3,
+	> .contact-address.dl-horizontal {
+		display: none;
+	}
+	.form-horizontal .control-label {
+		float: none;
+		width: auto;
+		text-align: inherit;
+		padding: 0;
+		label {
+			margin: 0 0 10px;
+		}
+	}
+	.form-horizontal .controls {
+		margin: 0;
+	}
+	.form-actions {
+		background: none;
+		border: none;
+		padding: 0;
+	}
+	fieldset + fieldset {
+		margin-top: (@JMbaseSpace /2);
+	}
+}
+
+.contact-ps #contact-form {
+	fieldset:first-child {
+		margin: 0 -(@JMbaseSpace/2);
+		> .left-column {
+			float: left;
+			width: 50%;
+		}
+		> .right-column {
+			margin-top: 50px;
+			float: right;
+			width: 50%;
+		}
+		> legend,
+		> .left-column,
+		> .right-column {
+			padding: 0 (@JMbaseSpace/2);
+			.box-sizing(border-box);
+			textarea,
+			input[type='text'],
+			input[type='email'] {
+				max-width: 100%;
+			}
+			textarea {
+				min-height: 278px;
+			}
+		}
+	}
+	> .control-group,
+	.contact-captcha {
+		margin-left: -(@JMbaseSpace/2);
+		margin-right: -(@JMbaseSpace/2);
+	}
+	> .control-group > .controls,
+	.contact-captcha > .control-group {
+		clear: both;
+		width: 50%;
+		float: right;
+		padding: 0 (@JMbaseSpace/2);
+		.box-sizing(border-box);
+	}
+	> .control-group > .controls {
+		.btn {
+			width: 100%;
+			display: block;
+		}
+	}
+	@media (max-width: 979px) {
+		fieldset:first-child {
+			> .left-column {
+				width: 100%;
+			}
+			> .right-column {
+				margin-top: 20px;
+				width: 100%;
+			}
+		}
+		> .control-group > .controls,
+		.contact-captcha > .control-group {
+			width: 100%;
+		}
+	}
+}
+
+// JOOMLA MODULES
+//---------------------------------------------------------------
+
+//newsflash module
+.newsflash {
+	.newsflash-title {
+		font-weight: normal;
+		font-size: 1em;
+		margin: 10px 0 5px;
+		clear: both;
+		&:first-child {
+			margin: 0 0 5px;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.newsflash-horiz {
+	li + li {
+		margin: 10px 0 0;
+	}
+}
+
+//archive
+.archive-module > li {
+	margin: 10px 0;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+//article categories
+.categories-module {
+	li {
+		h1, h2, h3, h4, h5, h6 {
+			line-height: 1.1;
+			font-weight: normal;
+			margin: 0;
+		}
+	}
+	li + li {
+		margin: (@JMbaseSpace /2) 0 0;
+	}
+}
+
+//article category
+.category-module {
+	margin: 0;
+	li {
+		p {
+			line-height: @JMbaseLineHeight;
+			margin: 0 0 5px;
+		}
+	}
+	li > a {
+		display: block;
+		font-weight: normal;
+	}
+	span {
+		display: inline-block;
+		margin: 10px 0 0;
+	}
+}
+
+//login module
+#form-login-username,
+#form-login-password {
+	label.element-invisible {
+		display: none;
+	}
+}
+
+#login-form ul li .icon-arrow-right {
+	display: none;
+}
+
+//smart search
+#mod-finder-searchform {
+	margin: 0;
+	a {
+		display: block;
+		margin-top: 5px;
+	}
+}
+
+//search module
+.form-search {
+	label.finder {
+		padding: 0 10px 0 0;
+	}
+}
+
+//feed
+.feed h2 ~ ul.newsfeed {
+	margin-top: 10px;
+}
+
+//weblinks
+.weblinks li {
+	margin-top: 5px;
+	&:first-child {
+		margin: 0;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+//search
+.search input#mod-search-searchword {
+	width: 100%;
+}
+
+.form-search {
+	.btn {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.search .button[type='image'] {
+	padding: 0;
+}
+
+//languages module
+.mod-languages ul {
+	list-style: none;
+	li {
+		background: none;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+}
+
+// SYSTEM MESSAGE
+//---------------------------------------------------------------
+
+#system-message .alert {
+	margin: @JMbaseSpace 0;
+	a {
+		text-decoration: none;
+	}
+}
+
+// ERROR PAGE
+//---------------------------------------------------------------
+
+//error page
+.jm-error-page {
+	text-align: center;
+	> h1 {
+		font-size: 80px;
+		font-weight: @JMbaseFontWeight;
+		line-height: 1;
+	}
+	> h2 {
+		font-size: 40px;
+		font-weight: @JMbaseFontWeight;
+		line-height: 1;
+		margin: 0 0 (@JMbaseSpace * 2);
+	}
+	> p {
+		margin: 0 0 (@JMbaseSpace * 2);
+	}
+	input.inputbox {
+		max-width: 260px;
+	}
+	.moduletable {
+		margin: 0 0 (@JMbaseSpace * 2);
+	}
+}
+
+// SCREEN READER
+//---------------------------------------------------------------
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}

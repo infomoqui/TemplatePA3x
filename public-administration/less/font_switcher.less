@@ -1,0 +1,343 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+ 
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/mixins-ext.less"; //JM extended mixins
+@import "template_mixins.less";
+
+// FONT SWITCHER
+//---------------------------------------------------------------
+
+.fsize(@JMfontFactor) {
+	font-size: @JMbaseFontSize * @JMfontFactor;
+	
+	// MODULES.LESS
+	//------------------------------
+	
+	//jm-module title
+	.jm-module .jm-title,
+	.moduletable > h3 {
+		font-size: @JMmoduleTitleFontSize * @JMfontFactor;
+	}
+
+	.jm-tiles {
+		.jm-tile {
+			font-size: @JMmoduleTitleFontSize * @JMfontFactor;
+		}
+		.jm-link {
+			font-size: @JMmoduleTitleFontSize * @JMfontFactor;
+		}
+	}
+
+
+	// DJMEGAMENU.LESS
+	//------------------------------
+	
+	.dj-megamenu-override li.dj-up {
+		a.dj-up_a {
+			font-size: @JMtopmenuFontSize * @JMfontFactor;
+		}
+	}
+
+	//submenu elements styles
+	.dj-megamenu-override .dj-subcol {
+		font-size: @JMtopmenuFontSize * @JMfontFactor;
+	}
+
+	.dj-megamenu-override .modules-wrap {
+		.moduletable {
+			> h3 {
+				font-size: @JMtopmenuFontSize * @JMfontFactor;
+			}
+		}
+	}
+	
+	// megamenu
+	.dj-megamenu-override {
+		.nav.menu {
+			> li > a,
+			> li > span.separator {
+				font-size: @JMtopmenuFontSize * @JMfontFactor;
+			}
+		}
+	}
+	
+	// MENUS.LESS
+	//------------------------------
+
+	// JOOMLA.LESS
+	//------------------------------
+	
+	//page headings
+	h1.componentheading, //extension headings support
+	.tag-category > h1, //tag category
+	.page-header > h1, //global
+	.content-category > h1, //category-list
+	.categories-list > h1, //categories-list
+	.blog-featured > h1, //featured contacts
+	.contact-category > h1, //contact category
+	.contact > h1, //single contact
+	.newsfeed-category > h1, //newsfeed category
+	h1.page-title, //search form
+	.finder > h1, //smart search
+	.weblink-category > h1, //weblink category
+	.edit > h1, //submit weblink
+	.blog > h2 //blog category
+	{
+		font-size: @JMcomponentHeadingFontSize * @JMfontFactor;
+	}
+
+	//singlre article
+	.item-page > .page-header > h2 {
+		font-size: @JMarticleTitleFontSize * @JMfontFactor;
+	}
+
+	//component headings (eg. blog)
+	h2.item-title, //featured
+	.page-header > h2, //global
+	.content-category > h2, //category-list category
+	.cat-children > h3, //category children
+	.contact-category > h2, //contact category
+	.weblink-category > h2, //weblink category
+	.newsfeed > h2, //single newsfeed
+	.newsfeed-category > h2, //newsfeed category
+	.weblink-category > h2, //weblink category
+	.contact > h3 //contact headings
+	{
+		font-size: @JMblogTitleFontSize * @JMfontFactor;
+	}
+	
+	//article index
+	.article-index {
+		h3 {
+			font-size: @JMmoduleTitleFontSize * @JMfontFactor;
+		}
+	}
+	
+	//error page
+	.jm-error-page {
+		text-align: center;
+		> h1 {
+			font-size: 80px * @JMfontFactor;
+		}
+		> h2 {
+			font-size: 40px * @JMfontFactor;
+		}
+	}
+	
+	// ------------------------------------------------
+	// BOOTSTRAP
+	//-------------------------------------------------
+	
+	// TYPE.LESS
+	//------------------------------
+	
+	.lead {
+		font-size: (@baseFontSize * 1.5) * @JMfontFactor;
+	}
+	
+	h1 small { font-size: (@baseFontSize * 1.75) * @JMfontFactor; } 
+	h2 small { font-size: (@baseFontSize * 1.25) * @JMfontFactor; } 
+	h3 small { font-size: (@baseFontSize) * @JMfontFactor; }
+	h4 small { font-size: (@baseFontSize) * @JMfontFactor; }
+	
+	// LABELS-BADGES.LESS
+	//------------------------------
+	
+	.label,
+	.badge {
+		font-size: 11px * @JMfontFactor;
+	}
+	
+	// BUTTONS.LESS
+	//------------------------------
+	
+	// Core
+	.btn {
+		font-size: @JMbuttonFontSize * @JMfontFactor;
+	}
+
+	a.button,
+	input.button,
+	button.button,
+	input[type="submit"],
+	button[type="submit"],
+	input[type="reset"],
+	button[type="reset"] {
+		.btn();
+	}
+	
+	// Small
+	.btn-small,
+	.button.btn-small {
+		font-size: @fontSizeSmall * @JMfontFactor;
+	}
+	
+	// Mini
+	.btn-mini,
+	.button.btn-mini {
+		font-size: @fontSizeMini * @JMfontFactor;
+	}
+	
+	// FORMS.LESS
+	//------------------------------
+	
+	legend {
+		font-size: @JMblogTitleFontSize * @JMfontFactor;
+		// Small
+		small {
+			font-size: (@baseLineHeight * .75) * @JMfontFactor;
+		}
+	}
+	
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	.uneditable-input {
+		font-size: @JMinputFontSize * @JMfontFactor;
+	}
+	
+	// BUTTON-GROUPS.LESS
+	//------------------------------
+	
+	//JM .btn-group > .btn,
+	.btn-group > .dropdown-menu,
+	.btn-group > .popover {
+		font-size: @baseFontSize * @JMfontFactor;
+	}
+	
+	.btn-group > .btn {
+		font-size: @JMbuttonFontSize * @JMfontFactor;  
+	}
+
+	// Reset fonts for other sizes
+	.btn-group > .btn-mini {
+		font-size: @fontSizeMini * @JMfontFactor;
+	}
+	.btn-group > .btn-small {
+		font-size: @fontSizeSmall * @JMfontFactor;
+	}
+	.btn-group > .btn-large {
+		font-size: @fontSizeLarge * @JMfontFactor;
+	}
+	
+	// PAGINATION.LESS
+	//------------------------------
+	
+	.pagination ul > li > a,
+	.pagination ul > li > span {
+		font-size: @JMmoduleTitleFontSize * @JMfontFactor;
+	}
+	
+	// DJMEDIATOOLS.LESS
+	//------------------------------
+	
+	.dj-cat-title {
+		font-size: @JMarticleTitleFontSize * @JMfontFactor;
+	}
+
+	.dj-slide-desc-text {
+		font-size: (15px  * @JMfontFactor) !important;
+	}
+
+	.dj-slide-title {
+		font-size: @JMmoduleTitleFontSize * @JMfontFactor !important;
+	}
+
+	#djmediatools .dj-categories {
+		.dj-ctitle-in {
+			font-size: @JMmoduleTitleFontSize * @JMfontFactor !important;
+		}
+	}
+
+	.dj-tabber {
+		span.dj-tab-in {
+			font-size: @JMmoduleTitleFontSize * @JMfontFactor !important;
+		}
+	}
+
+	// DJTABS.LESS
+	//------------------------------
+
+	#jm-allpage .djtabs.default-theme {
+		.djtabs-title {
+			font-size: @JMmoduleTitleFontSize * @JMfontFactor;
+		}
+	}
+
+
+
+}
+
+//main content size (bigger factor)
+.fcontentSize(@JMfontFactorContent) {
+	#jm-maincontent {
+		font-size: @JMbaseFontSize * @JMfontFactorContent;
+	}
+}
+
+
+//prepare styles for factors
+.fsize70 {
+	.fsize(@JMfontFactor70);
+	.fcontentSize(@JMfontFactorContent70);
+}
+
+.fsize80 {
+	.fsize(@JMfontFactor80);
+	.fcontentSize(@JMfontFactorContent80);
+}
+
+.fsize90 {
+	.fsize(@JMfontFactor90);
+	.fcontentSize(@JMfontFactorContent90);
+}
+
+.fsize110 {
+	.fsize(@JMfontFactor110);
+	.fcontentSize(@JMfontFactorContent110);
+}
+
+.fsize120 {
+	.fsize(@JMfontFactor120);
+	.fcontentSize(@JMfontFactorContent120);
+}
+
+.fsize130 {
+	.fsize(@JMfontFactor130);
+	.fcontentSize(@JMfontFactorContent130);
+}
+
+
+
+
+
+
+
+
+

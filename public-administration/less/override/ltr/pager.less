@@ -1,0 +1,53 @@
+//
+// Pager pagination
+// --------------------------------------------------
+
+
+.pager {
+  margin: @baseLineHeight 0;
+  list-style: none;
+  text-align: center;
+  .clearfix();
+  clear: both;
+	span {
+		font-family: inherit;
+	}
+  span.icon-chevron-left,
+  span.icon-chevron-right {
+	  display: none;
+  }
+}
+.pager li {
+  display: inline;
+  background-image: none;
+  padding: 0;
+}
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: @baseLineHeight;
+  .transition(all 0.2s ease-in);
+  text-decoration: none;
+  margin: 0;
+  font-weight: bold;
+  .box-sizing(border-box);
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  text-decoration: underline;
+}
+.pager .next > a,
+.pager .next > span {
+  float: right;
+}
+.pager .previous > a,
+.pager .previous > span {
+  float: left;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+	cursor: default;
+}

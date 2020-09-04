@@ -1,0 +1,460 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// LAYOUT
+//---------------------------------------------------------------
+
+//site wrapper
+#jm-allpage {
+	position: relative;
+	background: @JMpageBackground;
+}
+
+//wcag
+.wide-page .container-fluid {
+	max-width: 100%;
+}
+
+// Sticky Logo Nav
+.sticky-bar.scrolled #jm-logo-wrap {
+	top: 0;
+	bottom: auto;
+	left: 0;
+	right: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	background: @JMheaderBackground;
+}
+
+
+#jm-logo-wrap-static {
+	display: none;
+}
+.sticky-bar.scrolled {
+	#jm-logo-wrap-static {
+		display: block;
+	}
+}
+
+//logo-nav
+#jm-logo-nav {
+	position: relative;
+	color: @JMheaderFontColor;
+	background: @JMheaderBackground;
+}
+
+#jm-top-bar {
+	background: @JMtopbarBackground;
+	color: @JMtopbarFontColor;
+	font-size: 0.72em;
+}
+
+#jm-top-bar-left-mod,
+#jm-top-bar-right-mod,
+#jm-top-bar-center-mod {
+	padding: 9px 0;
+}
+
+#jm-top-bar-center-mod {
+	text-align: center;
+}
+
+#jm-top-bar-right-mod {
+	text-align: right;
+}
+
+#jm-top-bar .jm-wcag-settings {
+	margin: 0 -5px;
+	padding: 9px 0;
+	overflow: hidden;
+	&.pull-center {
+		text-align: center;
+		li {
+			float: none;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	li {
+		float: left;
+	}
+	ul li {
+		margin: 5px 0;
+		padding: 0;
+		line-height: 20px;
+		&:before {
+			display: none;
+		}
+		a {
+			display: block;
+			margin: 0 5px;
+			color: @JMtopbarFontColor;
+			&:hover {
+				span {
+					background: @JMstyle;
+				}
+			}
+		}
+		.jm-separator {
+			color: jmdarken(@JMtopbarFontColor, 30%);
+			padding-left: 5px;
+		}
+		[class^="icon-"], [class*=" icon-"] {
+			margin: 0 5px 0 0;
+			font-size: 0.9em;
+			line-height: 1;
+		}
+		.icon-plus-sign { //text plus size
+			margin: 0 0 0 5px;
+		}
+	}
+	.contrast {
+		a {
+			float: left;
+			text-decoration: none;
+			span {
+				display: block;
+				margin: 0;
+				padding: 0 5px;
+				line-height: 18px;
+				border: 1px solid jmlighten(@JMtopbarBackground, 80%);
+				.box-sizing(border-box);
+			}
+			&.jm-highcontrast span {
+				background: @JMhcBackground;
+				color: @JMhcFontColor;
+				&:hover {
+					background: @JMhcFontColor;
+					color: @JMhcBackground;
+				}
+			}
+			&.jm-highcontrast2 span {
+				background: @JMhc2Background;
+				color: @JMhc2FontColor;
+				&:hover {
+					background: @JMhc2FontColor;
+					color: @JMhc2Background;
+				}
+			}
+			&.jm-highcontrast3 span {
+				background: @JMhc3Background;
+				color: @JMhc3FontColor;
+				&:hover {
+					background: @JMhc3FontColor;
+					color: @JMhc3Background;
+				}
+			}
+		}
+	}
+	.container-width,
+	.resizer {
+		a {
+			float: left;
+			text-decoration: none;
+			span {
+				display: block;
+				margin: 0;
+				padding: 0 5px;
+				line-height: 18px;
+				border: 1px solid jmlighten(@JMtopbarBackground, 80%);
+				.box-sizing(border-box);
+			}
+		}
+	}
+}
+
+// Logo Nav
+// --------------------------
+
+#jm-logo-wrap {
+	padding-top: 28px;
+	padding-bottom: 28px;
+}
+
+#jm-logo-wrap-in {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+#jm-logo-left {
+	margin-right: 30px;
+}
+
+#jm-logo {
+	margin-right: 30px;
+	a {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		> span {
+			display: block;
+		}
+	}
+	img {
+		border: none;
+	}
+	#jm-logo-img {
+		flex-shrink: 0;
+		+ #jm-logotext-desc {
+			padding-left: 20px;
+		}
+	}
+	#jm-logotext {
+		font-size: @JMlogoFontSize;
+		font-family: @JMlogoFontFamily;
+		line-height: 1;
+	}
+	#jm-sitedesc {
+		display: block;
+		font-size: 0.8em;
+		padding-top: 5px;
+		line-height: 1.1;
+	}
+	a {
+		color: inherit;
+	}
+}
+
+
+
+#jm-logo-right {
+	margin-left: auto;
+}
+
+#jm-logo-right1 + #jm-logo-right2 {
+	padding-top: 10px;
+}
+
+#jm-top-menu {
+	color: @JMtopmenuFontColor;
+	border-top: 3px solid @JMheaderFontColor;
+}
+
+// Header
+// --------------------------
+
+#jm-header {
+	padding-top: (@JMbaseSpace * 2);
+	padding-bottom: @JMbaseSpace;
+	color: @JMheaderFontColor;
+	background: @JMheaderBackground;
+}
+
+#jm-header.full-width {
+	padding-top: 0;
+	padding-bottom: 0;
+	.container-fluid {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.jm-module {
+		margin: 0;
+	}
+}
+
+// top 1 and 2
+// --------------------------
+
+#jm-top1 {
+	padding-top: (@JMbaseSpace * 2);
+	padding-bottom: @JMbaseSpace;
+	background: @JMtop1Background;
+	color: @JMtop1FontColor;
+}
+
+#jm-top2 {
+	padding-top: (@JMbaseSpace * 2);
+	padding-bottom: @JMbaseSpace;
+	background: @JMtop2Background;
+	color: @JMtop2FontColor;
+}
+
+// system message
+// --------------------------
+
+#jm-system-mesasage {
+	background: @JMpageBackground;
+}
+
+// main
+// --------------------------
+
+#jm-main {
+	padding-top: (@JMbaseSpace * 2);
+	padding-bottom: @JMbaseSpace;
+	background: @JMmainBackground;
+	color: @JMmainFontColor;
+}
+
+#jm-maincontent {
+	display: block;
+	margin-bottom: @JMbaseSpace;
+}
+
+// bottom
+// --------------------------
+
+#jm-bottom1 {
+	padding-top: (@JMbaseSpace * 2);
+	padding-bottom: @JMbaseSpace;
+	background: @JMbottom1Background;
+	color: @JMbottom1FontColor;
+}
+
+#jm-bottom2 {
+	padding-top: (@JMbaseSpace * 2);
+	padding-bottom: @JMbaseSpace;
+	background: @JMbottom2Background;
+	color: @JMbottom2FontColor;
+}
+
+#jm-bottom3 {
+	padding-top: (@JMbaseSpace * 2);
+	padding-bottom: @JMbaseSpace;
+	background: @JMbottom3Background;
+	color: @JMbottom3FontColor;
+}
+
+// footer
+// --------------------------
+
+#jm-footer-mod {
+	padding-top: (@JMbaseSpace * 2);
+	padding-bottom: @JMbaseSpace;
+	background: @JMfooterBackground;
+	color: @JMfooterFontColor;
+}
+
+#jm-footer {
+	background: @JMfooterBackground;
+	color: @JMfooterFontColor;
+	border-top: 1px solid fade(@JMfooterFontColor, 10%);
+}
+
+#jm-footer-in {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	line-height: 1.2;
+	font-size: @JMcopyrightFontSize;
+}
+
+#jm-copy-powered {
+	padding-left: 10px;
+	#jm-copyrights {
+		float: left;
+	}
+	#jm-copyrights + #jm-poweredby {
+		float: left;
+		padding-left: 5px;
+		margin-left: 5px;
+		border-left: 1px solid currentColor;
+	}
+	a {
+		color: inherit;
+		&:hover,
+		&:focus {
+			color: @JMstyle;
+		}
+	}
+}
+
+// Back to top
+// --------------------------
+
+#jm-back-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	left: auto;
+	z-index: 999;
+	a {
+		position: relative;
+		display: block;
+		height: 60px;
+		width: 60px;
+		.transition(all 1s ease 0s);
+		.border-radius(50%);
+		background-color: darken(@JMstyle, 10%);
+		text-decoration: none;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-image: url("../images/backtotop.png");
+		.opacity(30);
+		&:hover {
+			.opacity(60);
+			text-decoration: none;
+		}
+	}
+}
+
+// section space
+// --------------------------
+
+#jm-top1 + #jm-system-message + #jm-main,
+#jm-top1 + #jm-system-message + #jm-bottom1 {
+	padding-top: 0;
+}
+
+#jm-main + #jm-bottom1 {
+	padding-top: 0;
+}
+
+#jm-top2 + #jm-system-message + #jm-bottom2 {
+	border-top: 0;
+}
+
+// template width in pixels
+// --------------------------
+
+.responsive-disabled-pixels() when(ispixel(@JMfluidGridContainerLg)) {
+	//set min width if responsive is disabled
+	.responsive-disabled {
+		min-width: @JMfluidGridContainerLg;
+		#jm-allpage {
+			min-width: @JMfluidGridContainerLg;
+			padding-top: 0 !important;
+		}
+		#jm-logo-nav {
+			position: static;
+		}
+	}
+}
+.responsive-disabled-pixels();
+
+// template width in percentage
+// --------------------------
+
+.responsive-disabled-percentage() when(ispercentage(@JMfluidGridContainerLg)) {
+	@media (max-width: 1200px) {
+		.container-fluid {
+			.box-sizing(border-box);
+			max-width: 100%;
+		}
+	}
+	//set min width if responsive is disabled
+	.responsive-disabled {
+		min-width: 1200px;
+		#jm-allpage {
+			min-width: 1200px;
+			padding-top: 0 !important;
+		}
+		#jm-logo-nav {
+			position: static;
+		}
+	}
+}
+.responsive-disabled-percentage();
+

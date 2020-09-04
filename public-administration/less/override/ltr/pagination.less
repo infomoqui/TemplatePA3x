@@ -1,0 +1,158 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+
+// Space out pagination from surrounding content
+.pagination {
+  padding: @JMbaseSpace 0 0;
+  margin: -5px 0 0;
+  text-align: center;
+  clear: both;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  font-size: 0; //
+}
+
+.pagination ul {
+  // Allow for text-based alignment
+  display: inline-block;
+  .border-radius(@baseBorderRadius);
+}
+.pagination ul > li {
+  display: inline-block; // Remove list-style and block-level defaults //JM edited
+  background: none;
+  padding: 0;
+  margin: 5px 0 0;
+  vertical-align: top;
+  &:before {
+	  content: none !important;
+  }
+  &:not([class]) {
+    margin: 5px 0 0;
+    padding: 0;
+    + li:not([class]) {
+      margin-left: 1px;
+    }
+  }
+}
+.pagination ul > li > a,
+.pagination ul > li > span {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  .transition(all 0.2s ease-in);
+  text-decoration: none;
+  margin: 0;
+  font-weight: @JMmoduleTitleFontWeight;
+  font-family: @JMmoduleTitleFontFamily;
+  font-size: @JMmoduleTitleFontSize;
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  background: @JMblogBackground;
+  color: @JMstyle;
+  .box-sizing(border-box);
+}
+
+.pagination ul > li.active > a,
+.pagination ul > li > span.pagenav {
+  background: @JMstyle;
+  color: @JMschemeFontColor;
+}
+
+.pagination {
+  ul li.pagination-start span.pagenav,
+  ul li.pagination-prev span.pagenav,
+  ul li.pagination-next span.pagenav,
+  ul li.pagination-end span.pagenav {
+    width: auto;
+    height: auto;
+    background: none;
+    color: inherit;
+    padding: 0 12px;
+  }
+}
+
+.pagination {
+  ul li.pagination-start a,
+  ul li.pagination-prev a,
+  ul li.pagination-next a,
+  ul li.pagination-end a {
+    width: auto;
+    height: auto;
+    background: none;
+    color: @JMstyle;
+    padding: 0 12px;
+    &:hover,
+    &:focus {
+      background: none;
+      text-decoration: underline;
+    }
+  }
+}
+
+p.counter {
+  float: none !important;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus {
+  background: darken(@JMblogBackground, 5%);
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  cursor: default;
+
+}
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > a:focus {
+  cursor: default;
+}
+
+
+// Alignment
+// --------------------------------------------------
+
+.pagination-centered {
+  text-align: center;
+}
+.pagination-right {
+  text-align: right;
+}
+
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-large {
+  ul > li > a,
+  ul > li > span {
+    padding: @paddingLarge;
+    font-size: @fontSizeLarge;
+  }
+}
+
+// Small
+.pagination-small {
+  ul > li > a,
+  ul > li > span {
+    padding: @paddingSmall;
+    font-size: @fontSizeSmall;
+  }
+}
+// Mini
+.pagination-mini {
+  ul > li > a,
+  ul > li > span {
+    padding: @paddingMini;
+    font-size: @fontSizeMini;
+  }
+}

@@ -1,0 +1,259 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+
+@import "template_mixins.less";
+
+// RESPONSIVE
+//---------------------------------------------------------------
+
+.wcag-layout() when(ispixel(@JMfluidGridContainerLg)) {
+	@media (max-width: (@JMfluidGridContainerLg + @JMbaseSpace)) {
+		#jm-top-bar .jm-wcag-settings .container-width {
+			display: none !important;
+		}
+	}
+}
+.wcag-layout();
+
+@media (max-width: 979px) {
+
+	// global
+	// --------------------------
+
+	//module height
+	.jm-module-in {
+		height: auto !important;
+	}
+
+	//responsive images
+	img {
+		.box-sizing(border-box);
+	}
+
+	//fix on displaying buttons on webkit browsers
+	.btn {
+		-webkit-appearance: none;
+	}
+
+	#jm-top-menu {
+		border: none;
+	}
+
+	// modules
+	// --------------------------
+
+	//reset the module height suffix
+	.jm-module-in {
+		height: auto !important;
+	}
+
+	//easy-contact
+	#jm-allpage .jm-module-content > .dj-simple-contact-form {
+		> form {
+			max-width: 100%;
+		}
+		.dj-simple-contact-form-introtext {
+			max-width: 100%;
+		}
+		.name,
+		.email,
+		.message {
+			width: 100% !important;
+		}
+	}
+
+	//mobile menu
+	.mobile-menu-focused  #jm-allpage,
+	.mobile-menu #jm-allpage {
+		padding-bottom: 99px;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	// global
+	// --------------------------
+
+	//responsive inputs
+	input, select, textarea {
+		max-width: 100%;
+	}
+
+	//article items
+	.items-row {
+		margin-bottom: @JMbaseSpace;
+	}
+
+	.items-row .item {
+		margin-bottom: @JMbaseSpace;
+	}
+
+	// layout
+	// --------------------------
+
+	#jm-logo {
+		#jm-logotext {
+			font-size: 1.5em;
+		}
+	}
+
+	#jm-logo-right .search {
+		padding: 10px 0;
+		input[type="search"] {
+			display: none;
+		}
+		.btn {
+			position: static;
+			width: 56px;
+			height: 56px;
+			line-height: 56px;
+		}
+	}
+
+	#jm-footer-in {
+		#jm-footer-menu,
+		#jm-copy-powered {
+			display: block;
+			width: 100%;
+			margin: 0 0 10px;
+		}
+	}
+
+	#jm-back-top {
+		a {
+			height: 30px;
+			width: 30px;
+		}
+	}
+
+	// modules
+	// --------------------------
+
+	//custom
+
+	.btn-large,
+	.readmore-large {
+		font-size: @JMbuttonFontSize;
+		padding: 14px 30px;
+		min-width: 0;
+	}
+
+	#jm-allpage .jm-category-module li {
+		width: 100% !important;
+	}
+
+	//pricing
+	.jm-pricing {
+		&.col2 .box {
+			width: 100%;
+		}
+	}
+
+}
+
+
+@media (max-width: 480px) {
+
+	// global
+	// --------------------------
+
+	//responsive inputs
+	input, select, textarea {
+		width: 100%;
+	}
+
+	#jm-logo {
+		margin-right: 10px;
+		#jm-logotext {
+			font-size: 1em;
+		}
+		#jm-logo-img + #jm-logotext-desc {
+			padding-left: 10px;
+		}
+	}
+
+	#jm-logo-left {
+		margin-right: 10px;
+	}
+
+	#jm-logo-right .search .btn {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		.fa-search {
+			font-size: 16px;
+		}
+	}
+
+	#jm-footer-in {
+		#jm-copy-powered #jm-copyrights + #jm-poweredby {
+			clear: both;
+			padding: 0;
+			margin: 0;
+			border: none;
+		}
+	}
+
+	#jm-mobile-menu ul.nav.menu > li > a {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	//tabs
+	dl.tabs,
+	.nav-tabs {
+		display: block!important;
+	}
+	dl.tabs dt.tabs,
+	.nav-tabs > li {
+		float: none!important;
+		a {
+			margin-left: 0!important;
+			margin-right: 0!important;
+		}
+	}
+
+	#jm-allpage .djtabs.default-theme .djtabs-title-wrapper {
+		display: block;
+		.djtabs-title {
+			float: none;
+		}
+	}
+
+	//modules
+
+	#jm-allpage .jm-module-content > .dj-simple-contact-form {
+		.dj-simple-contact-form-introtext {
+			padding-bottom: @JMbaseSpace;
+		}
+	}
+
+}
+
+@media (max-width: 350px) {
+	#jm-logo {
+		#jm-logotext-desc {
+			display: none;
+		}
+	}
+}
+
+// EXTENSIONS import
+//---------------------------------------------------------------
+
+@import "djmediatools_responsive.less";
+

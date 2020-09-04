@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.0" type="template" client="site" method="upgrade">
+	<name>public-administration</name>
+	<version>1.00</version>
+	<creationDate>19/02/2018</creationDate>
+	<author>joomla-monster.com</author>
+	<authorEmail>contact@joomla-monster.com</authorEmail>
+	<authorUrl>joomla-monster.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<group>jmf-ef4</group>
+	<description>
+	<![CDATA[
+	<div class="jm-description clearfix">
+		<div class="pull-left" style="max-width: 35.69%;">
+			<img style="max-width: 100%; box-sizing: border-box; -webkit-box-sizing: border-box; padding: 10px; background: #fff; border: 1px solid #e1e1e1;" src="../templates/public-administration/images/logo.png" />
+		</div>
+		<div class="pull-left" style="max-width: 64.31%; box-sizing: border-box; -webkit-box-sizing: border-box; padding: 0 30px;">
+			<div style="margin-bottom: 20px;">
+				<h2 style="font-size: 33px; line-height: 40px; font-weight: 600; color: #393939; margin-top: 0;">Public Administration</h2>
+				<span style="color: #a0a0a0; display: block; margin-top: -10px;">Template version: 1.00</span>
+				<div style="margin: 20px 0 0;">
+					<a style="text-decoration: none !important; outline: none;" target="_blank" href="#">
+						<img src="http://joomla-monster.com/images/templates/ef4.png" />
+					</a>
+					<a href="http://www.joomla-monster.com/index.php?option=com_content&catid=137&id=897&view=article&Itemid=1027" target="_blank" style="margin: 0 20px; color: #3ea5ea;">Based on EF4 Framework</a>
+				</div>
+			</div>
+			<div style="margin-bottom: 20px;">
+				<a style="text-decoration: none !important; display: block; outline: none;" target="_blank" href="http://www.joomla-monster.com/">
+					<img src="http://joomla-monster.com/images/templates/monster.png" />
+				</a>
+			</div>
+			<div style="margin: 0 -20px;">
+				<div style="display: inline-block; margin: 0 20px 20px;">
+					<span style="display: block; color: #a0a0a0;">Templates for Joomla!</span>
+					<a style="font-size: 15px; color: #3ea5ea;" target="_blank" href="http://www.joomla-monster.com">www.joomla-monster.com</a>
+				</div>
+				<div style="display: inline-block; margin: 0 20px 20px;">
+					<span style="display: block; color: #a0a0a0;">Extensions for Joomla!</span>
+					<a style="font-size: 15px; color: #3ea5ea;" target="_blank" href="http://www.dj-extensions.com">www.dj-extensions.com</a>
+				</div>
+				<div style="display: inline-block; margin: 0 20px 20px;">
+					<span style="display: block; color: #a0a0a0;">Custom Joomla! Services</span>
+					<a style="font-size: 15px; color: #3ea5ea;" target="_blank" href="http://www.design-joomla.eu">www.design-joomla.eu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDefaults.json</filename>
+		<folder>assets</folder>
+		<folder>cache</folder>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>less</folder>
+		<folder>lib</folder>
+		<folder>tpl</folder>
+	</files>
+	<positions>
+		<position>before-top</position>
+		<position>skip-menu</position>
+		<position>top-bar-left</position>
+		<position>top-bar-right</position>
+		<position>top-bar-center</position>
+		<position>logo-left</position>
+		<position>logo-right1</position>
+		<position>logo-right2</position>
+		<position>top-menu-nav</position>
+		<position>header</position>
+		<position>top1-1</position>
+		<position>top1-2</position>
+		<position>top1-3</position>
+		<position>top1-4</position>
+		<position>top1-5</position>
+		<position>top1-6</position>
+		<position>top2-1</position>
+		<position>top2-2</position>
+		<position>top2-3</position>
+		<position>top2-4</position>
+		<position>top2-5</position>
+		<position>top2-6</position>
+		<position>breadcrumbs</position>
+		<position>left-column</position>
+		<position>right-column</position>
+		<position>content-bottom</position>
+		<position>content-top</position>
+		<position>bottom1-1</position>
+		<position>bottom1-2</position>
+		<position>bottom1-3</position>
+		<position>bottom1-4</position>
+		<position>bottom1-5</position>
+		<position>bottom1-6</position>
+		<position>bottom2-1</position>
+		<position>bottom2-2</position>
+		<position>bottom2-3</position>
+		<position>bottom2-4</position>
+		<position>bottom2-5</position>
+		<position>bottom2-6</position>
+		<position>bottom3-1</position>
+		<position>bottom3-2</position>
+		<position>bottom3-3</position>
+		<position>bottom3-4</position>
+		<position>bottom3-5</position>
+		<position>bottom3-6</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-5</position>
+		<position>footer-6</position>
+		<position>footer-menu</position>
+		<position>copyrights</position>
+		<position>mobile-menu</position>
+		<position>after-footer</position>
+		<position>offcanvas</position>
+		<position>dj-offcanvas-top</position>
+		<position>dj-offcanvas-bottom</position>
+		<position>coming-soon</position>
+		<position>debug</position>
+	</positions>
+	<config></config>
+	<tplconfig>
+		<fields name="params">
+
+			<!-- BASIC SETTINGS -->
+			<fieldset name="jmbasic" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BASIC_SETTINGS_LABEL">
+
+				<!-- STICKY BAR -->
+				<field name="stickyBar" type="radio" class="btn-group" default="0" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STICKYBAR_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STICKYBAR_DESC">
+					<option value="0">PLG_SYSTEM_JMFRAMEWORK_CONFIG_DISABLE_LABEL</option>
+					<option value="1">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ENABLE_LABEL</option>
+				</field>
+
+				<!-- MASONRY BLOG -->
+				<field name="masonry" type="radio" class="btn-group" default="0" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MASONRY_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MASONRY_DESC">
+					<option value="0">PLG_SYSTEM_JMFRAMEWORK_CONFIG_DISABLE_LABEL</option>
+					<option value="1">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ENABLE_LABEL</option>
+				</field>
+
+				<!-- WCAG -->
+				<field name="spacer_basic_custom_1" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_WCAG" />
+
+				<!-- wcagButtons -->
+				<field name="wcagPosition" type="radio" class="btn-group" default="pull-right" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_WCAG_POSITION_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_WCAG_POSITION_DESC">
+					<option value="pull-right">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PULL_RIGHT</option>
+					<option value="pull-left">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PULL_LEFT</option>
+					<option value="pull-center">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PULL_CENTER</option>
+				</field>
+
+				<!-- NIGHT VERSION -->
+				<field name="nightVersion" type="radio" class="btn-group" default="0" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_NIGHT_VERSION_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_NIGHT_VERSION_DESC">
+					<option value="0">PLG_SYSTEM_JMFRAMEWORK_CONFIG_DISABLE_LABEL</option>
+					<option value="1">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ENABLE_LABEL</option>
+				</field>
+
+				<!-- HIGH CONTRAST -->
+				<field name="highContrast" type="radio" class="btn-group" default="0" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HIGH_CONTRAST_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HIGH_CONTRAST_DESC">
+					<option value="0">PLG_SYSTEM_JMFRAMEWORK_CONFIG_DISABLE_LABEL</option>
+					<option value="1">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ENABLE_LABEL</option>
+				</field>
+
+				<!-- TEMPLATE_WIDTH -->
+				<field name="wideSite" type="radio" class="btn-group" default="0" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_WIDTH_SWITCHER" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_WIDTH_SWITCHER_DESC">
+					<option value="0">PLG_SYSTEM_JMFRAMEWORK_CONFIG_DISABLE_LABEL</option>
+					<option value="1">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ENABLE_LABEL</option>
+				</field>
+
+			</fieldset>
+
+			<!-- TEMPLATE LAYOUT BUILDER -->
+			<fieldset name="jmlayoutbuilder" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_LAYOUT_BUILDER_LABEL"></fieldset>
+
+			<!-- FONT SETTINGS -->
+			<fieldset name="jmfont" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SETTINGS_LABEL">
+				<!-- LOGO FONT -->
+				<field name="spacer_font_99" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_LOGO_FONT_SETTINGS_SPACER"/>
+				<field name="JMlogoFontSize" type="jmfontsize" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SIZE_SELECTOR_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SIZE_SELECTOR_DESC"/>
+				<field name="logoFontType" target="JMlogoFontFamily" type="jmoptiongroups" default="" class="jmradio" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_DESC">
+					<group value="0;logoFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STANDARD_FONT_LABEL" />
+					<group value="1;logoGoogleWebFontUrl;logoGoogleWebFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLEWEBFONT_LABEL" />
+					<group value="2;logoGeneratedWebFont" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GENERATEDWEBFONT_LABEL" />
+				</field>
+				<field name="logoFontFamily" class="src-option" type="list" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_DESC">
+					<option value="Arial, Helvetica, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_LABEL</option>
+					<option value="'Arial Black', 'Arial Bold', Gadget, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_BLACK_LABEL</option>
+					<option value="'Arial Narrow', Arial, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_NARROW_LABEL</option>
+					<option value="Tahoma, Geneva, Verdana, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TAHOMA_LABEL</option>
+					<option value="Verdana, Geneva, Tahoma, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_VERDANA_LABEL</option>
+					<option value="'Times New Roman', Times, serif;">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TIMESNEWROMAN_LABEL</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_GEORGIA_LABEL</option>
+					<option value="'Courier New', Courier, 'Andale Mono', monospace">PLG_SYSTEM_JMFRAMEWORK_CONFIG_COURIER_LABEL</option>
+					<option value="'Trebuchet MS', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TREBUCHET_LABEL</option>
+					<option value="'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_LUCIDA_LABEL</option>
+					<option value="Impact, Haettenschweiler, 'Arial Narrow Bold', Charcoal, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_IMPACT_LABEL</option>
+					<option value="Palatino, 'Palatino Linotype', 'URW Palladio L', Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PALATINO_LABEL</option>
+					<option value="'Century Gothic', 'Apple Gotic', 'URW Gothic L', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_CENTURY_GOTHIC_LABEL</option>
+				</field>
+				<field name="logoGoogleWebFontUrl" class="google-font-url" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_URL_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_URL_DESC" />
+				<field name="logoGoogleWebFontFamily" class="src-option" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_FAMILY_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_FAMILY_DESC" />
+				<field name="logoGeneratedWebFont" class="src-option" default="" type="jmfontgenerated" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_CUSTOM_FONT_NAME_DESC" />
+				<!-- BASE FONT - END -->
+			</fieldset>
+
+			<!-- COLOR MODIFICATIONS -->
+			<fieldset name="jmcolormodifications" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FIELDSET_COLOR_MODIFICATIONS">
+
+				<!-- MESSAGE -->
+				<field name="spacer_color_1" type="spacer" class="jm-alert alert alert-info" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODIFICATIONS_MESSAGE1" />
+
+				<!-- COLOR VERSION -->
+				<field name="spacer_color_2" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SCHEME_COLOR" />
+				<field name="JMcolorVersion" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MAIN_SCHEME_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MAIN_SCHEME_COLOR_DESC" />
+				<field name="JMschemeFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MAIN_SCHEME_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MAIN_SCHEME_FONT_COLOR_DESC" />
+				<field name="JMimagesDir" type="jmfolderlist" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_IMAGES_DIRECTORY" directory="images" filter="^scheme.+" />
+
+				<!-- GLOBAL -->
+				<field name="spacer_color_3" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GLOBAL" />
+				<field name="JMpageBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_PAGE_BG" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_PAGE_BG_DESC" />
+				<field name="JMbaseFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BASE_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BASE_FONT_COLOR_DESC" />
+				<field name="JMarticleTitleColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARTICLE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARTICLE_TITLE_COLOR_DESC" />
+				<field name="JMmoduleTitleColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR_DESC" />
+				<field name="JMborder" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_COMPONENT_BORDER" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_COMPONENT_BORDER_DESC" />
+
+				<!-- TOP BAR -->
+				<field name="spacer_color_13" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPBAR" />
+				<field name="JMtopbarFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPBAR_FONT_COLOR_DESC" />
+				<field name="JMtopbarBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPBAR_BG_COLOR" />
+				
+				<!-- HEADER -->
+				<field name="spacer_color_5" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADER" />
+				<field name="JMheaderFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADER_FONT_COLOR_DESC" />
+				<field name="JMheaderBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADER_BG_COLOR" />
+				<field name="JMheaderModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADER_MODULE_TITLE_COLOR" />
+
+				<!-- TOPMENU -->
+				<field name="spacer_color_4" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPMENU" />
+				<field name="JMtopmenuFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPMENU_FONT_COLOR_DESC" />
+				<field name="JMtopSubmenuBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_BG_COLOR_DESC" />
+				<field name="JMtopSubmenuFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_FONT_COLOR_DESC" />
+
+				<!-- TOP2 AND BOTTOM2 -->
+				<field name="spacer_color_7" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOP2" />
+				<field name="JMtop2FontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOP2_FONT_COLOR_DESC" />
+				<field name="JMtop2ModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOP2_MODULE_TITLE_COLOR" />
+				<field name="JMtop2Background" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOP2_BG_COLOR" />
+
+				<!-- BOTTOM3 -->
+				<field name="spacer_color_10" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BOTTOM3" />
+				<field name="JMbottom3FontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BOTTOM3_FONT_COLOR_DESC" />
+				<field name="JMbottom3ModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BOTTOM3_MODULE_TITLE_COLOR" />
+				<field name="JMbottom3Background" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BOTTOM3_BG_COLOR" />
+
+				<!-- FOOTER -->
+				<field name="spacer_color_11" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER" />
+				<field name="JMfooterFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER_FONT_COLOR_DESC" />
+				<field name="JMfooterModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER_MODULE_TITLE_COLOR" />
+				<field name="JMfooterBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER_BG_COLOR" />
+				<field name="JMfooterLinkColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_LINK_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER_LINK_COLOR_DESC" />
+				
+				<!-- BLOG / COLOR-MS -->
+				<field name="spacer_color_12" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG" />
+				<field name="JMblogFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG_FONT_COLOR_DESC" />
+				<field name="JMblogBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG_BG_COLOR" />
+				<field name="JMblogTitleFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG_MODULE_TITLE_COLOR" />
+
+				<!-- OFFCANVAS -->
+				<field name="spacer_color_8" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_OFFCANVAS" />
+				<field name="JMoffCanvasBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_OFFCANVAS_BG_DESC" />
+				<field name="JMoffCanvasFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_OFFCANVAS_FONT_COLOR_DESC" />
+				<field name="JMoffCanvasModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_OFFCANVAS_MODULE_TITLE_COLOR" />
+
+				<!-- EXTENSIONS -->
+				<field name="spacer_color_9" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MEDIATOOLS" />
+				<field name="JMmediatoolsDescriptionBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_EXTENSIONS_MEDIATOOLS_DESCRIPTION_BG" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_EXTENSIONS_MEDIATOOLS_DESCRIPTION_BG_DESC" />
+				<field name="JMmediatoolsDescriptionFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_EXTENSIONS_MEDIATOOLS_DESCRIPTION_TEXT" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_EXTENSIONS_MEDIATOOLS_DESCRIPTION_TEXT_DESC" />
+				<field name="JMmediatoolsOpacity" class="src-option" type="list" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MEDIATOOLS_DESCRIPTION_OPACITY" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MEDIATOOLS_DESCRIPTION_OPACITY_DESC">
+					<option value="0">0</option>
+					<option value="5">5%</option>
+					<option value="10">10%</option>
+					<option value="15">15%</option>
+					<option value="20">20%</option>
+					<option value="25">25%</option>
+					<option value="30">30%</option>
+					<option value="35">35%</option>
+					<option value="40">40%</option>
+					<option value="45">45%</option>
+					<option value="50">50%</option>
+					<option value="55">55%</option>
+					<option value="60">60%</option>
+					<option value="65">65%</option>
+					<option value="70">70%</option>
+					<option value="75">75%</option>
+					<option value="80">80%</option>
+					<option value="85">85%</option>
+					<option value="90">90%</option>
+					<option value="95">95%</option>
+					<option value="100">100%</option>
+				</field>
+
+				<!-- TABS -->
+				<field name="spacer_color_14" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS" />
+				<field name="JMtabsFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_FONT_COLOR_DESC" />
+				<field name="JMtabsBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_BG_COLOR_DESC" />
+				<field name="JMtabsTitleFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_TITLE_COLOR_DESC" />
+				<field name="JMtabsTitleBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_TITLE_BG" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_TITLE_BG_DESC" />
+			</fieldset>
+
+			<!-- ADVANCED FEATURES -->
+			<fieldset name="jmadvanced" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_ADVANCED_FEATURES_LABEL"></fieldset>
+
+			<!-- STORAGE -->
+			<fieldset name="jmstorage" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STORAGE_SETTINGS_STORAGE"></fieldset>
+
+			<!-- DOCUMENTATION -->
+			<fieldset name="jmdocumentation" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_DOCUMENTATION_LABEL"></fieldset>
+
+			<!-- VERSION -->
+			<fieldset name="jmversion" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_UPDATES_FIELDSET_LABEL"></fieldset>
+
+		</fields>
+		<fields name="themecustomiser">
+
+			<!-- COLOR MODIFICATIONS -->
+			<fieldset name="th-basic-settings" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FIELDSET_TEMPLATE">
+
+
+				<!--<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SCHEME_COLOR" name="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SCHEME_COLOR" />-->
+			
+				<!-- COLOR VERSION -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SCHEME_COLOR" />
+				<field name="JMcolorVersion" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MAIN_SCHEME_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MAIN_SCHEME_COLOR_DESC" />
+				<field name="JMschemeFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MAIN_SCHEME_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MAIN_SCHEME_FONT_COLOR_DESC" />
+
+				<!-- GLOBAL -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GLOBAL" />
+				<field name="JMpageBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_PAGE_BG" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_PAGE_BG_DESC" />
+				<field name="JMbaseFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BASE_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BASE_FONT_COLOR_DESC" />
+				<field name="JMarticleTitleColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARTICLE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARTICLE_TITLE_COLOR_DESC" />
+				<field name="JMmoduleTitleColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR_DESC" />
+				<field name="JMborder" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_COMPONENT_BORDER" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_COMPONENT_BORDER_DESC" />
+
+				<!-- TOP BAR -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPBAR" />
+				<field name="JMtopbarFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPBAR_FONT_COLOR_DESC" />
+				<field name="JMtopbarBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPBAR_BG_COLOR" />
+				
+				<!-- HEADER -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADER" />
+				<field name="JMheaderFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADER_FONT_COLOR_DESC" />
+				<field name="JMheaderBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADER_BG_COLOR" />
+				<field name="JMheaderModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADER_MODULE_TITLE_COLOR" />
+
+				<!-- TOPMENU -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPMENU" />
+				<field name="JMtopmenuFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPMENU_FONT_COLOR_DESC" />
+				<field name="JMtopSubmenuBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_BG_COLOR_DESC" />
+				<field name="JMtopSubmenuFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_FONT_COLOR_DESC" />
+
+				<!-- TOP2 AND BOTTOM2 -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOP2" />
+				<field name="JMtop2FontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOP2_FONT_COLOR_DESC" />
+				<field name="JMtop2ModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOP2_MODULE_TITLE_COLOR" />
+				<field name="JMtop2Background" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOP2_BG_COLOR" />
+
+				<!-- BOTTOM3 -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BOTTOM3" />
+				<field name="JMbottom3FontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BOTTOM3_FONT_COLOR_DESC" />
+				<field name="JMbottom3ModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BOTTOM3_MODULE_TITLE_COLOR" />
+				<field name="JMbottom3Background" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BOTTOM3_BG_COLOR" />
+
+				<!-- FOOTER -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER" />
+				<field name="JMfooterFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER_FONT_COLOR_DESC" />
+				<field name="JMfooterModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER_MODULE_TITLE_COLOR" />
+				<field name="JMfooterBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER_BG_COLOR" />
+				<field name="JMfooterLinkColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_LINK_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FOOTER_LINK_COLOR_DESC" />
+
+				<!-- BLOG / COLOR-MS -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG" />
+				<field name="JMblogFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG_FONT_COLOR_DESC" />
+				<field name="JMblogBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG_BG_COLOR" />
+				<field name="JMblogTitleFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG_MODULE_TITLE_COLOR" />
+
+				<!-- OFFCANVAS -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_OFFCANVAS" />
+				<field name="JMoffCanvasBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_OFFCANVAS_BG_DESC" />
+				<field name="JMoffCanvasFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_OFFCANVAS_FONT_COLOR_DESC" />
+				<field name="JMoffCanvasModuleTitle" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MODULE_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_OFFCANVAS_MODULE_TITLE_COLOR" />
+
+			</fieldset>
+
+			<!-- EXTENSIONS -->
+			<fieldset name="th-extensions-settings" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FIELDSET_EXTENSIONS">
+
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MEDIATOOLS" />
+				<field name="JMmediatoolsDescriptionBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_EXTENSIONS_MEDIATOOLS_DESCRIPTION_BG" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_EXTENSIONS_MEDIATOOLS_DESCRIPTION_BG_DESC" />
+				<field name="JMmediatoolsDescriptionFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_EXTENSIONS_MEDIATOOLS_DESCRIPTION_TEXT" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_EXTENSIONS_MEDIATOOLS_DESCRIPTION_TEXT_DESC" />
+				<field name="JMmediatoolsOpacity" class="src-option" type="list" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MEDIATOOLS_DESCRIPTION_OPACITY" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_MEDIATOOLS_DESCRIPTION_OPACITY_DESC">
+					<option value="0">0</option>
+					<option value="5">5%</option>
+					<option value="10">10%</option>
+					<option value="15">15%</option>
+					<option value="20">20%</option>
+					<option value="25">25%</option>
+					<option value="30">30%</option>
+					<option value="35">35%</option>
+					<option value="40">40%</option>
+					<option value="45">45%</option>
+					<option value="50">50%</option>
+					<option value="55">55%</option>
+					<option value="60">60%</option>
+					<option value="65">65%</option>
+					<option value="70">70%</option>
+					<option value="75">75%</option>
+					<option value="80">80%</option>
+					<option value="85">85%</option>
+					<option value="90">90%</option>
+					<option value="95">95%</option>
+					<option value="100">100%</option>
+				</field>
+
+				<!-- TABS -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS" />
+				<field name="JMtabsFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_FONT_COLOR_DESC" />
+				<field name="JMtabsBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_BG_COLOR_DESC" />
+				<field name="JMtabsTitleFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_TITLE_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_TITLE_COLOR_DESC" />
+				<field name="JMtabsTitleBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_TITLE_BG" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TABS_TITLE_BG_DESC" />
+			</fieldset>
+
+			<!-- FONT SETTINGS -->
+			<fieldset name="th-font-settings" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SETTINGS_LABEL">
+
+				<!-- BASE FONT -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_SETTINGS_SPACER" name="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_SETTINGS_SPACER" />
+				<field name="JMbaseFontSize" type="jmfontsize" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SIZE_SELECTOR_LABEL" />
+				<field name="bodyFontType" target="JMbaseFontFamily" type="jmoptiongroups" default="" class="jmradio" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_LABEL">
+					<group value="0;bodyFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STANDARD_FONT_LABEL" />
+					<group value="1;bodyGoogleWebFontUrl;bodyGoogleWebFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLEWEBFONT_LABEL" />
+					<group value="2;bodyGeneratedWebFont" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GENERATEDWEBFONT_LABEL" />
+				</field>
+				<field name="bodyFontFamily" class="src-option" type="list" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL">
+					<option value="Arial, Helvetica, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_LABEL</option>
+					<option value="'Arial Black', 'Arial Bold', Gadget, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_BLACK_LABEL</option>
+					<option value="'Arial Narrow', Arial, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_NARROW_LABEL</option>
+					<option value="Tahoma, Geneva, Verdana, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TAHOMA_LABEL</option>
+					<option value="Verdana, Geneva, Tahoma, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_VERDANA_LABEL</option>
+					<option value="'Times New Roman', Times, serif;">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TIMESNEWROMAN_LABEL</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_GEORGIA_LABEL</option>
+					<option value="'Courier New', Courier, 'Andale Mono', monospace">PLG_SYSTEM_JMFRAMEWORK_CONFIG_COURIER_LABEL</option>
+					<option value="'Trebuchet MS', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TREBUCHET_LABEL</option>
+					<option value="'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_LUCIDA_LABEL</option>
+					<option value="Impact, Haettenschweiler, 'Arial Narrow Bold', Charcoal, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_IMPACT_LABEL</option>
+					<option value="Palatino, 'Palatino Linotype', 'URW Palladio L', Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PALATINO_LABEL</option>
+					<option value="'Century Gothic', 'Apple Gotic', 'URW Gothic L', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_CENTURY_GOTHIC_LABEL</option>
+				</field>
+				<field name="bodyGoogleWebFontUrl" class="google-font-url" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_URL_LABEL" />
+				<field name="bodyGoogleWebFontFamily" class="src-option" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_FAMILY_LABEL" />
+				<field name="bodyGeneratedWebFont" class="src-option" default="" type="jmfontgenerated" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL" />
+				<!-- BASE FONT - END -->
+
+				<!-- TOP MENU FONT -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_DJMENU_FONT_SETTINGS_SPACER" name="PLG_SYSTEM_JMFRAMEWORK_CONFIG_DJMENU_FONT_SETTINGS_SPACER" />
+				<field name="JMtopmenuFontSize" type="jmfontsize" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SIZE_SELECTOR_LABEL" />
+				<field name="djmenuFontType" target="JMtopmenuFontFamily" type="jmoptiongroups" default="" class="jmradio" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_LABEL">
+					<group value="0;djmenuFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STANDARD_FONT_LABEL" />
+					<group value="1;djmenuGoogleWebFontUrl;djmenuGoogleWebFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLEWEBFONT_LABEL" />
+					<group value="2;djmenuGeneratedWebFont" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GENERATEDWEBFONT_LABEL" />
+				</field>
+				<field name="djmenuFontFamily" class="src-option" type="list" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL">
+					<option value="Arial, Helvetica, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_LABEL</option>
+					<option value="'Arial Black', 'Arial Bold', Gadget, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_BLACK_LABEL</option>
+					<option value="'Arial Narrow', Arial, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_NARROW_LABEL</option>
+					<option value="Tahoma, Geneva, Verdana, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TAHOMA_LABEL</option>
+					<option value="Verdana, Geneva, Tahoma, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_VERDANA_LABEL</option>
+					<option value="'Times New Roman', Times, serif;">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TIMESNEWROMAN_LABEL</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_GEORGIA_LABEL</option>
+					<option value="'Courier New', Courier, 'Andale Mono', monospace">PLG_SYSTEM_JMFRAMEWORK_CONFIG_COURIER_LABEL</option>
+					<option value="'Trebuchet MS', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TREBUCHET_LABEL</option>
+					<option value="'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_LUCIDA_LABEL</option>
+					<option value="Impact, Haettenschweiler, 'Arial Narrow Bold', Charcoal, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_IMPACT_LABEL</option>
+					<option value="Palatino, 'Palatino Linotype', 'URW Palladio L', Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PALATINO_LABEL</option>
+					<option value="'Century Gothic', 'Apple Gotic', 'URW Gothic L', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_CENTURY_GOTHIC_LABEL</option>
+				</field>
+				<field name="djmenuGoogleWebFontUrl" class="google-font-url" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_URL_LABEL" />
+				<field name="djmenuGoogleWebFontFamily" class="src-option" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_FAMILY_LABEL" />
+				<field name="djmenuGeneratedWebFont" class="src-option" default="" type="jmfontgenerated" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL" />
+				<!-- TOP MENU FONT END -->
+
+				<!-- HEADING FONT -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADINGS_FONT_SETTINGS_SPACER" name="PLG_SYSTEM_JMFRAMEWORK_CONFIG_HEADINGS_FONT_SETTINGS_SPACER" />
+				<field name="JMmoduleTitleFontSize" type="jmfontsize" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SIZE_SELECTOR_LABEL" />
+				<field name="headingsFontType" target="JMmoduleTitleFontFamily" type="jmoptiongroups" default="" class="jmradio" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_LABEL">
+					<group value="0;headingsFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STANDARD_FONT_LABEL" />
+					<group value="1;headingsGoogleWebFontUrl;headingsGoogleWebFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLEWEBFONT_LABEL" />
+					<group value="2;headingsGeneratedWebFont" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GENERATEDWEBFONT_LABEL" />
+				</field>
+				<field name="headingsFontFamily" class="src-option" type="list" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL">
+					<option value="Arial, Helvetica, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_LABEL</option>
+					<option value="'Arial Black', 'Arial Bold', Gadget, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_BLACK_LABEL</option>
+					<option value="'Arial Narrow', Arial, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_NARROW_LABEL</option>
+					<option value="Tahoma, Geneva, Verdana, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TAHOMA_LABEL</option>
+					<option value="Verdana, Geneva, Tahoma, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_VERDANA_LABEL</option>
+					<option value="'Times New Roman', Times, serif;">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TIMESNEWROMAN_LABEL</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_GEORGIA_LABEL</option>
+					<option value="'Courier New', Courier, 'Andale Mono', monospace">PLG_SYSTEM_JMFRAMEWORK_CONFIG_COURIER_LABEL</option>
+					<option value="'Trebuchet MS', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TREBUCHET_LABEL</option>
+					<option value="'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_LUCIDA_LABEL</option>
+					<option value="Impact, Haettenschweiler, 'Arial Narrow Bold', Charcoal, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_IMPACT_LABEL</option>
+					<option value="Palatino, 'Palatino Linotype', 'URW Palladio L', Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PALATINO_LABEL</option>
+					<option value="'Century Gothic', 'Apple Gotic', 'URW Gothic L', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_CENTURY_GOTHIC_LABEL</option>
+				</field>
+				<field name="headingsGoogleWebFontUrl" class="google-font-url" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_URL_LABEL" />
+				<field name="headingsGoogleWebFontFamily" class="src-option" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_FAMILY_LABEL" />
+				<field name="headingsGeneratedWebFont" class="src-option" default="" type="jmfontgenerated" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL" />
+				<!-- HEADING FONT END -->
+
+				<!-- BLOG ARTICLE HEADING FONT -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG_FONT_SETTINGS_SPACER" name="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BLOG_FONT_SETTINGS_SPACER" />
+				<field name="JMblogTitleFontSize" type="jmfontsize" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SIZE_SELECTOR_LABEL" />
+				<field name="blogFontType" target="JMblogTitleFontFamily" type="jmoptiongroups" default="" class="jmradio" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_LABEL">
+					<group value="0;blogFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STANDARD_FONT_LABEL" />
+					<group value="1;blogGoogleWebFontUrl;blogGoogleWebFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLEWEBFONT_LABEL" />
+					<group value="2;blogGeneratedWebFont" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GENERATEDWEBFONT_LABEL" />
+				</field>
+				<field name="blogFontFamily" class="src-option" type="list" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL">
+					<option value="Arial, Helvetica, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_LABEL</option>
+					<option value="'Arial Black', 'Arial Bold', Gadget, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_BLACK_LABEL</option>
+					<option value="'Arial Narrow', Arial, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_NARROW_LABEL</option>
+					<option value="Tahoma, Geneva, Verdana, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TAHOMA_LABEL</option>
+					<option value="Verdana, Geneva, Tahoma, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_VERDANA_LABEL</option>
+					<option value="'Times New Roman', Times, serif;">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TIMESNEWROMAN_LABEL</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_GEORGIA_LABEL</option>
+					<option value="'Courier New', Courier, 'Andale Mono', monospace">PLG_SYSTEM_JMFRAMEWORK_CONFIG_COURIER_LABEL</option>
+					<option value="'Trebuchet MS', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TREBUCHET_LABEL</option>
+					<option value="'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_LUCIDA_LABEL</option>
+					<option value="Impact, Haettenschweiler, 'Arial Narrow Bold', Charcoal, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_IMPACT_LABEL</option>
+					<option value="Palatino, 'Palatino Linotype', 'URW Palladio L', Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PALATINO_LABEL</option>
+					<option value="'Century Gothic', 'Apple Gotic', 'URW Gothic L', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_CENTURY_GOTHIC_LABEL</option>
+				</field>
+				<field name="blogGoogleWebFontUrl"  class="google-font-url" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_URL_LABEL" />
+				<field name="blogGoogleWebFontFamily" class="src-option" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_FAMILY_LABEL" />
+				<field name="blogGeneratedWebFont" class="src-option" default="" type="jmfontgenerated" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL" />
+				<!-- BLOG ARTICLE HEADING FONT END -->
+
+				<!-- ARTICLE HEADING FONT -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARTICLES_FONT_SETTINGS_SPACER" name="PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARTICLES_FONT_SETTINGS_SPACER" />
+				<field name="JMarticleTitleFontSize" type="jmfontsize" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SIZE_SELECTOR_LABEL" />
+				<field name="articlesFontType" target="JMarticleTitleFontFamily" type="jmoptiongroups" default="" class="jmradio" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_LABEL">
+					<group value="0;articlesFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STANDARD_FONT_LABEL" />
+					<group value="1;articlesGoogleWebFontUrl;articlesGoogleWebFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLEWEBFONT_LABEL" />
+					<group value="2;articlesGeneratedWebFont" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GENERATEDWEBFONT_LABEL" />
+				</field>
+				<field name="articlesFontFamily" class="src-option" type="list" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL">
+					<option value="Arial, Helvetica, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_LABEL</option>
+					<option value="'Arial Black', 'Arial Bold', Gadget, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_BLACK_LABEL</option>
+					<option value="'Arial Narrow', Arial, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_NARROW_LABEL</option>
+					<option value="Tahoma, Geneva, Verdana, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TAHOMA_LABEL</option>
+					<option value="Verdana, Geneva, Tahoma, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_VERDANA_LABEL</option>
+					<option value="'Times New Roman', Times, serif;">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TIMESNEWROMAN_LABEL</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_GEORGIA_LABEL</option>
+					<option value="'Courier New', Courier, 'Andale Mono', monospace">PLG_SYSTEM_JMFRAMEWORK_CONFIG_COURIER_LABEL</option>
+					<option value="'Trebuchet MS', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TREBUCHET_LABEL</option>
+					<option value="'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_LUCIDA_LABEL</option>
+					<option value="Impact, Haettenschweiler, 'Arial Narrow Bold', Charcoal, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_IMPACT_LABEL</option>
+					<option value="Palatino, 'Palatino Linotype', 'URW Palladio L', Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PALATINO_LABEL</option>
+					<option value="'Century Gothic', 'Apple Gotic', 'URW Gothic L', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_CENTURY_GOTHIC_LABEL</option>
+				</field>
+				<field name="articlesGoogleWebFontUrl"  class="google-font-url" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_URL_LABEL" />
+				<field name="articlesGoogleWebFontFamily" class="src-option" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_FAMILY_LABEL" />
+				<field name="articlesGeneratedWebFont" class="src-option" default="" type="jmfontgenerated" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL" />
+				<!-- ARTICLE HEADING FONT END -->
+
+				<!-- LOGO FONT -->
+				<field type="jmacchelper" hidden="true" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_LOGO_FONT_SETTINGS_SPACER" name="PLG_SYSTEM_JMFRAMEWORK_CONFIG_LOGO_FONT_SETTINGS_SPACER" />
+				<field name="JMlogoFontSize" type="jmfontsize" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_SIZE_SELECTOR_LABEL" />
+				<field name="logoFontType" target="JMblogTitleFontFamily" type="jmoptiongroups" default="" class="jmradio" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BODY_FONT_LABEL">
+					<group value="0;logoFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_STANDARD_FONT_LABEL" />
+					<group value="1;logoGoogleWebFontUrl;logoGoogleWebFontFamily" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLEWEBFONT_LABEL" />
+					<group value="2;logoGeneratedWebFont" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GENERATEDWEBFONT_LABEL" />
+				</field>
+				<field name="logoFontFamily" class="src-option" type="list" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL">
+					<option value="Arial, Helvetica, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_LABEL</option>
+					<option value="'Arial Black', 'Arial Bold', Gadget, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_BLACK_LABEL</option>
+					<option value="'Arial Narrow', Arial, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_ARIAL_NARROW_LABEL</option>
+					<option value="Tahoma, Geneva, Verdana, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TAHOMA_LABEL</option>
+					<option value="Verdana, Geneva, Tahoma, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_VERDANA_LABEL</option>
+					<option value="'Times New Roman', Times, serif;">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TIMESNEWROMAN_LABEL</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_GEORGIA_LABEL</option>
+					<option value="'Courier New', Courier, 'Andale Mono', monospace">PLG_SYSTEM_JMFRAMEWORK_CONFIG_COURIER_LABEL</option>
+					<option value="'Trebuchet MS', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_TREBUCHET_LABEL</option>
+					<option value="'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_LUCIDA_LABEL</option>
+					<option value="Impact, Haettenschweiler, 'Arial Narrow Bold', Charcoal, sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_IMPACT_LABEL</option>
+					<option value="Palatino, 'Palatino Linotype', 'URW Palladio L', Georgia, 'Times New Roman', Times, serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_PALATINO_LABEL</option>
+					<option value="'Century Gothic', 'Apple Gotic', 'URW Gothic L', sans-serif">PLG_SYSTEM_JMFRAMEWORK_CONFIG_CENTURY_GOTHIC_LABEL</option>
+				</field>
+				<field name="logoGoogleWebFontUrl"  class="google-font-url" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_URL_LABEL" />
+				<field name="logoGoogleWebFontFamily" class="src-option" default="" size="55" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_GOOGLE_FONT_FAMILY_LABEL" />
+				<field name="logoGeneratedWebFont" class="src-option" default="" type="jmfontgenerated" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_NAME_LABEL" />
+				<!-- LOGO FONT END -->
+
+			</fieldset>
+		</fields>
+	</tplconfig>
+</extension>

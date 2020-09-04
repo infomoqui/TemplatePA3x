@@ -1,0 +1,142 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+	 
+@import "template_variables.less";
+@import "bootstrap_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/mixins-ext.less"; //JM extended mixins
+@import "template_mixins.less";
+
+// OFFCANVAS
+//---------------------------------------------------------------
+
+html, 
+body {
+	height: 100%;
+} 
+
+//no-scroll class to prevent scrolling
+html.no-scroll {
+	width: 100%;
+	overflow-y: scroll;
+	position: fixed;
+}
+
+// page wrapper
+// --------------------------
+
+//transition to animate off-canvas and page
+#jm-allpage {
+	.transition(300ms ease margin);
+}
+
+//right position of off-canvas
+.off-canvas-right.off-canvas #jm-allpage {
+	margin-left: -(@JMoffCanvasWidth);
+	margin-right: @JMoffCanvasWidth;
+} 
+
+//left position of off-canvas
+.off-canvas-left.off-canvas #jm-allpage {
+	margin-right: -(@JMoffCanvasWidth);
+	margin-left: @JMoffCanvasWidth;
+}
+
+// off canvas column
+// --------------------------
+
+#jm-offcanvas {
+	width: @JMoffCanvasWidth;
+	height: 100%;
+	position: fixed;
+	z-index: 9999;
+	background: @JMoffCanvasBackground;
+	top: 0;
+	.transition(300ms ease all);
+}
+
+//right position of off-canvas
+.off-canvas-right #jm-offcanvas {
+	right: -(@JMoffCanvasWidth);
+}
+
+.off-canvas-right.off-canvas #jm-offcanvas {
+	right: 0;
+	overflow-y: auto;
+}
+
+//left position of off-canvas
+.off-canvas-left #jm-offcanvas {
+	left: -(@JMoffCanvasWidth);
+}
+
+.off-canvas-left.off-canvas #jm-offcanvas {
+	left: 0;
+	overflow-y: auto;
+}
+
+//off-canvas toolbar
+#jm-offcanvas-toolbar {
+	background: @JMoffCanvasToolbarBackground;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+}
+
+//off-canvas content
+#jm-offcanvas-content {
+	padding: 15px;
+	color: @JMoffCanvasFontColor;
+	.jm-title {
+		color: @JMoffCanvasFontColor;
+	}
+}
+
+//toggle-nav
+.toggle-nav {
+	cursor: pointer;
+	.fa,
+	[class^="icon-"], 
+	[class*=" icon-"] {
+		font-size: @JMoffCanvasIconSize;
+	}
+}
+
+.toggle-nav.menu {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+
+.toggle-nav.close-menu {
+	color: @JMoffCanvasModuleTitle;
+}
+
+.off-canvas-left #jm-offcanvas-toolbar {
+	text-align: right;
+}
+
+html[dir='rtl'] .off-canvas-right #jm-offcanvas-toolbar {
+	text-align: left;
+}
+
+// offcanvas module
+#jm-offcanvas .jm-module {
+	margin: @JMbaseSpace 0 0;
+	&:first-child {
+		margin: 0;
+	}
+	.jm-title {
+	color: @JMoffCanvasModuleTitle;
+	}
+}

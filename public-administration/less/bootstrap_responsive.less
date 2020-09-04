@@ -1,0 +1,53 @@
+//
+// Bootstrap Responsive v2.3.2
+//
+// Copyright 2013 Twitter, Inc
+// Licensed under the Apache License v2.0
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Designed and built with all the love in the world by @mdo and @fat.
+//
+
+
+// Responsive.less
+// For phone and tablet devices
+// -------------------------------------------------------------
+
+
+// REPEAT VARIABLES & MIXINS
+// -------------------------
+// Required since we compile the responsive stuff separately
+
+@import "bootstrap_variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/mixins.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/mixins-ext.less"; //JM extended mixins
+
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/responsive-1200px-min.less";
+
+// Tablets to regular desktops
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/responsive-768px-979px.less";
+
+//JM extended responsive grid
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/responsive-grid-ext.less"; //JM extended responsive grid
+
+// Phones to portrait tablets and narrow desktops
+//@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/responsive-767px-max.less";
+@import "override/ltr/responsive-767px-max.less"; //JM Override
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/responsive-navbar.less";

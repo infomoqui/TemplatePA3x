@@ -1,0 +1,6 @@
+
+.dj-megamenu-offcanvas .dj-mobile-open-btn:after,
+.dj-megamenu-accordion .dj-mobile-open-btn:after,
+.dj-megamenu-select .dj-mobile-open-btn:after {
+	content: 'Menu';
+}

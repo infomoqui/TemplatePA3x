@@ -1,0 +1,263 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// EDITOR
+//---------------------------------------------------------------
+
+// typography article
+// --------------------------
+
+h3.jm-typo-title {
+  border-bottom: 1px solid @JMborder;
+  padding-bottom: 10px;
+  margin: @JMbaseSpace 0;
+}
+
+h3.jm-typo-title ~ pre,
+h3.jm-typo-title ~ div pre {
+  margin-bottom: @JMbaseSpace;
+  font-size: 13px;
+}
+
+.jm-code {
+  border-left: 5px solid @JMborder;
+  padding: 10px;
+  background: #e7e6e6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 0 @JMbaseSpace;
+}
+
+// color class
+.jm-color {
+  color: @JMstyle;
+}
+
+// numered blocks
+.jm-block {
+  margin: 10px 0;
+  padding: 0 0 0 60px;
+  position: relative;
+  min-height: 40px;
+  span {
+    background: @grayLight;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    .border-radius (20px);
+    font-size: 18px;
+    color: @white;
+  }
+}
+
+.jm-block.second span {
+  background-color: @gray;
+}
+
+//quote blocks
+.quote-left,
+.quote-right {
+  display: block;
+  position: relative;
+  font-style: italic;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 48px;
+  }
+}
+
+.quote-left {
+  padding: 20px 20px 20px 100px;
+  text-align: left;
+  &:after {
+    top: 20px;
+    left: 20px;
+    right: auto;
+    background: url("../images/quote-left.png") no-repeat;
+  }
+}
+
+.quote-right {
+  padding: 20px 100px 20px 20px;
+  text-align: right;
+  &:after {
+    bottom: 20px;
+    left: auto;
+    right: 20px;
+    background: url("../images/quote-right.png") no-repeat;
+  }
+}
+
+//image borders
+.border_img1 {
+  padding: 4px;
+  background: #ececec;
+  .box-sizing(border-box);
+}
+
+.border_img2 {
+  background: #F2F2F2;
+  border: 1px solid #E5E5E5;
+  padding: 5px;
+  .box-sizing(border-box);
+}
+
+.border_img3 {
+  border: 1px solid #DFDFDF;
+  padding: 1px;
+  background: @white;
+  .box-sizing(border-box);
+}
+
+//colored blocks
+p.blue {
+  border-left: 3px solid #BCE8F1;
+  padding: 0 0 0 10px;
+}
+
+p.green {
+  border-left: 3px solid #D6E9C6;
+  padding: 0 0 0 10px;
+}
+
+p.red {
+  border-left: 3px solid #EED3D7;
+  padding: 0 0 0 10px;
+  color: inherit; // inherit color from body, not from the "red" class
+}
+
+p.bluefill {
+  background: #D9EDF7;
+  border: 1px solid #BCE8F1;
+  display: block;
+  padding: 10px;
+  text-align: justify;
+  color: #3A87AD;
+  .border-radius(5px);
+}
+
+p.greenfill {
+  background: #DFF0D8;
+  border: 1px solid #D6E9C6;
+  display: block;
+  padding: 10px;
+  text-align: justify;
+  color: #468847;
+  .border-radius(5px);
+}
+
+p.redfill {
+  background: #F2DEDE;
+  border: 1px solid #EED3D7;
+  display: block;
+  padding: 10px;
+  text-align: justify;
+  color: #B94A48;
+  .border-radius(5px);
+}
+
+//icon blocks
+p,
+span {
+  &.jmbadge,
+  &.jmcalendar,
+  &.jmchat,
+  &.jmcheck,
+  &.jmcloud,
+  &.jmdirection,
+  &.jmdivide,
+  &.jmerror,
+  &.jmfire,
+  &.jmflag,
+  &.jmheart,
+  &.jmhome,
+  &.jminfo,
+  &.jmlist,
+  &.jmmail,
+  &.jmpeople,
+  &.jmstar,
+  &.jmstat {
+    display: block;
+    padding-left: 60px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    min-height: 40px;
+    margin: 5px 0 15px;
+  }
+  &.jmbadge {
+    background-image: url("../images/icons/badge.png");
+  }
+  &.jmcalendar {
+    background-image: url("../images/icons/calendar.png");
+  }
+  &.jmchat {
+    background-image: url("../images/icons/chat.png");
+  }
+  &.jmcheck {
+    background-image: url("../images/icons/check.png");
+  }
+  &.jmcloud {
+    background-image: url("../images/icons/cloud.png");
+  }
+  &.jmdirection {
+    background-image: url("../images/icons/direction.png");
+  }
+  &.jmdivide {
+    background-image: url("../images/icons/divide.png");
+  }
+  &.jmerror {
+    background-image: url("../images/icons/error.png");
+  }
+  &.jmfire {
+    background-image: url("../images/icons/fire.png");
+  }
+  &.jmflag {
+    background-image: url("../images/icons/flag.png");
+  }
+  &.jmheart {
+    background-image: url("../images/icons/heart.png");
+  }
+  &.jmhome {
+    background-image: url("../images/icons/home.png");
+  }
+  &.jminfo {
+    background-image: url("../images/icons/info.png");
+  }
+  &.jmlist {
+    background-image: url("../images/icons/list.png");
+  }
+  &.jmmail {
+    background-image: url("../images/icons/mail.png");
+  }
+  &.jmpeople {
+    background-image: url("../images/icons/people.png");
+  }
+  &.jmstar {
+    background-image: url("../images/icons/star.png");
+  }
+  &.jmstat {
+    background-image: url("../images/icons/stat.png");
+  }
+}
+
+// ordered lists
+ol.jm-roman, 
+ol.jm-roman ol {
+  list-style-type: upper-roman;
+}
+
+ol.jm-alpha, 
+ol.jm-alpha ol {
+  list-style-type: lower-alpha;
+}

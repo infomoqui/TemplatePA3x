@@ -1,0 +1,243 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// TABS
+//---------------------------------------------------------------
+
+#jm-allpage .full-tabs-ms .djtabs.default-theme {
+	.djtabs-title {
+		float: none;
+		text-align: center;
+	}
+}
+
+#jm-allpage .djtabs.default-theme {
+	margin: 0;
+	.tabs-wrapper {
+		font-size: 0; // remove inline-block space
+	}
+	.djtabs-title-wrapper {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	.djtabs-title {
+		font: inherit;
+		border: none;
+		font-weight: @JMmoduleTitleFontWeight;
+		font-family: @JMmoduleTitleFontFamily;
+		font-size: @JMmoduleTitleFontSize;
+		background: @JMtabsTitleBackground;
+		color: @JMtabsTitleFontColor;
+		padding: 23px 30px;
+		height: auto;
+		line-height: @baseLineHeight;
+		margin: 0;
+		text-decoration: none;
+		text-transform: none;
+		text-align: center;
+		width: auto !important;
+		.border-radius(0);
+		.box-sizing(border-box);
+		.djtab-text {
+			margin: 0;
+		}
+		
+	}
+	.djtabs-title-wrapper + .djtabs-title-wrapper .djtabs-title {
+		border-left: 1px solid lighten(@JMtabsTitleBackground, 15%);
+	}
+	.djtabs-title-wrapper + .djtabs-active-wrapper .djtabs-title,
+	.djtabs-active-wrapper + .djtabs-title-wrapper .djtabs-title {
+		border-color: transparent;
+	}
+
+	.djtabs-title:hover,
+	.djtabs-active-wrapper .djtabs-title {
+		background: @JMstyle;
+		color: @JMschemeFontColor;
+	}
+	.djtabs-in-border {
+		border: none;
+		
+	}
+	.djtabs-in {
+		margin: 0;
+		padding: 30px;
+		background: @JMtabsBackground;
+		color: @JMtabsFontColor;
+	}
+	[class^="icon-"], [class*=" icon-"] {
+		vertical-align: baseline;
+		margin: 0 10px 0 0;
+	}
+	.djtab-custom-html {
+		display: block;
+		margin: 5px 0 0;
+		font-size: 0.9em;
+		text-transform: none;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		&:first-child {
+			margin: 0 0 5px;
+		}
+	}
+	// accordion panel in tabs
+	.djtabs-article-group {
+		margin: 0;
+	}
+	.djtabs-panel {
+		height: auto;
+		margin: 0;
+		padding: 0;
+		background: none;
+		border: none;
+		.border-radius(0);
+		.djtabs-panel-title {
+			margin-left: 0;
+			font: inherit;
+			color: @JMstyle;
+			text-transform: none;
+			a {
+				text-decoration: none;
+				text-transform: none;
+			}
+		}
+		.djtabs-panel-date {
+			margin: 0 10px 0 0;
+			font: inherit;
+			color: inherit;
+		}
+	}
+	.djtabs-panel:hover {
+		.djtabs-panel-title,
+		.djtabs-panel-title a {
+			text-decoration: underline;
+		}
+	}
+	// .djtabs-panel-active {
+	// 	.djtabs-panel-title	{
+	// 		text-decoration: underline;
+	// 	}
+	// }
+	.djtabs-panel > span.djtabs-panel-toggler {
+		display: inline-block;
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: inherit;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		background: none;
+		color: @JMstyle;
+		width: 20px;
+		height: auto;
+		line-height: inherit;
+		margin: 0;
+		text-align: center;
+		&:before {
+			content: "\f107";
+		}
+	}
+
+	.djtabs-panel-active > span.djtabs-panel-toggler {
+		background: none;
+		&:before {
+			content: "\f106";
+		}
+	}
+	// article category columns view
+	.djtabs-article-group {
+		&.djtabs-article-out {
+			margin-bottom: @JMbaseSpace;
+		}
+	}
+	// single article
+	// in article
+	//date
+	.djtabs-date-in {
+		font: inherit;
+		color: inherit;
+	}
+
+	//content
+	.djtabs-article-content {
+		font: inherit;
+		color: inherit;
+		margin: 20px 0;
+		a {
+			color: @JMstyleLink;
+		}
+	}
+	.djtabs-article-footer {
+		margin: 15px 0 0;
+	}
+	.djtabs-article-author,
+	.djtabs-article-category {
+		font: inherit;
+		color: inherit;
+		font-weight: 400;
+		margin: 0 0 0 10px;
+		a {
+			font-weight: 400;
+			color: @JMstyleLink;
+		}
+	}
+	// readmore
+	.djtabs-readmore {
+		margin: 15px 0 0;
+		display: block;
+		width: 100%;
+		text-align: right;
+		a {
+			display: inline-block;
+			vertical-align: top;
+			font-style: normal;
+			color: @JMstyle;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.tabsBlock {
+		width: 100%;
+		margin: 0;
+	}
+	// intro image
+	.djtabs-article-img.dj-img-left {
+		margin-right: 20px;
+	}
+	.djtabs-article-img.dj-img-right {
+		margin-left: 20px;
+	}
+	.djtabs-article-img {
+		margin-top: 5px;
+		margin-bottom: 20px;
+	}
+}
+
+//accordion view
+#jm-allpage .djtabs.default-theme.accordion {
+	.djtabs-title-wrapper {
+		width: 100%;
+		margin: 0;
+	}
+	.djtabs-title {
+		border-top: 1px solid lighten(@JMtabsTitleBackground, 15%);
+		border-left: none;
+		border-right: none;
+		width: 100% !important;
+	}
+	.djtabs-active-wrapper .djtabs-title,
+	.djtabs-active-wrapper ~ .djtabs-next .djtabs-title {
+		border-color: transparent;
+	}
+}
+
+
+//loading
+img[id*='_djtabs_loading'] {
+	display: none !important;
+}

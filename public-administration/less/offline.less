@@ -1,0 +1,112 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+
+@import "template_mixins.less";
+
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/mixins.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/alerts.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less/close.less";
+@import "override/ltr/buttons.less";
+@import "override/ltr/forms.less";
+
+// OFFLINE PAGE
+//---------------------------------------------------------------
+
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif; //JM
+	font-size: @JMbaseFontSize; //JM
+	line-height: @JMbaseLineHeight; //JM edited
+	color: @JMbaseFontColor; //JM
+	background: @JMpageBackground;
+	text-align: center;
+}
+
+p {
+	margin: 0;
+}
+
+#system-message-container {
+	margin: 20px;
+}
+
+.jm-allpage {
+	padding: 10% 0 0;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: @JMfluidGridContainerLg;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+ 
+#jm-logo {
+	margin: 0 0 @JMbaseSpace;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: @JMbaseSpace 0 0;
+	display: inline-block;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.1;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+#form-login-username,
+#form-login-password,
+#form-login-secretkey,
+#submit-buton {
+	float: left;
+	margin: 0 10px 5px;
+}
+
+html[dir='rtl'] {
+	#form-login-username,
+	#form-login-password,
+	#form-login-secretkey,
+	#submit-buton {
+		float: right;
+	}
+}
+
+#form-login-remember {
+	clear: both;
+	text-align: left;
+	margin: 0 10px;
+}
+
+html[dir='rtl'] #form-login-remember {
+	text-align: right;
+}
+
+#form-login-remember label {
+	display: inline-block;
+	margin: 0 1px;
+}
+
+input#remember {
+	margin: 0;
+	vertical-align: middle;
+}

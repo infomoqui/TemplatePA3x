@@ -1,0 +1,307 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MENUS
+//---------------------------------------------------------------
+
+ul.nav.menu {
+	margin: 0;
+	li {
+		display: block;
+		background-image: none;
+		position: relative;
+		padding: 0;
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	//elements
+	li a,
+	li span.separator {
+		display: block;
+		color: @JMmenuItemFontColor;
+		line-height: @baseLineHeight; // 20px
+		font-weight: @JMbaseFontWeight;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			color: @JMmenuItemFontColorHover;
+			text-decoration: underline;
+		}
+	}
+	li.current,
+	li.active {
+		> a,
+		> span.separator {
+			color: @JMmenuItemFontColorHover;
+			text-decoration: underline;
+		}
+	}
+	//main elements
+	> li:first-child {
+		> a,
+		> span.separator {
+			padding-top: 0;
+		}
+	}
+	> li:last-child {
+		> a,
+		> span.separator {
+			padding-bottom: 0;
+		}
+	}
+	//subelements
+	//parents
+	> li > ul {
+		padding-left: 15px;
+	}
+	.nav-header {
+		color: inherit;
+	}
+}
+
+#jm-header,
+#jm-bottom3 {
+	ul.nav.menu {
+		li a,
+		li span.separator {
+			color: inherit;
+		}
+		li.current,
+		li.active {
+			> a,
+			> span.separator {
+				color: inherit;
+			}
+		}
+	}
+}
+
+#jm-footer-mod,
+#jm-footer {
+	ul.nav.menu {
+		> li {
+			border-bottom: 1px solid fade(@JMfooterFontColor, 10%);
+			&:first-child {
+				border-top: 1px solid fade(@JMfooterFontColor, 10%);
+			}
+			> a,
+			> span.separator {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+		li a,
+		li span.separator {
+			color: @JMfooterLinkColor;
+		}
+		li.current,
+		li.active {
+			> a,
+			> span.separator {
+				color: @JMfooterLinkColor;
+			}
+		}
+	}
+}
+
+//top-bar menu
+#jm-top-bar-mod {
+	ul.nav.menu {
+		margin: 0 -5px;
+		li {
+			float: left;
+			margin: 5px 0;
+			padding: 0;
+			line-height: 20px;
+			a,
+			span.separator {
+				display: block;
+				padding: 0;
+				margin: 0 5px;
+			}
+		}
+		ul {
+			display: none;
+		}
+	}
+}
+
+//footer menu
+#jm-footer-menu {
+	ul.nav.menu {
+		margin: 0 -12px;
+		li {
+			float: left;
+			border: none !important;
+			a,
+			span.separator {
+				padding: 0 12px;
+				line-height: 1.2;
+				font-size: inherit;
+			}
+		}
+		ul {
+			display: none;
+		}
+	}
+}
+
+
+// skip menu
+//----------------------------
+
+#jm-skip-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: auto;
+	z-index: 9999;
+	ul.nav.menu {
+		margin: 0;
+		> li {
+			padding: 0;
+			margin: 0;
+			border: none;
+			background: none;
+			display: inline-block;
+			vertical-align: top;
+		}
+		> li > a {
+			color: @JMskipMenuFontColor;
+			background: @JMskipMenuBackground;
+			position: absolute;
+			top: 0;
+			left: -9999px;
+			right: auto;
+			white-space: nowrap;
+			padding: 10px;
+			&:before {
+				display: none;
+			}
+			&:focus {
+				left: 0;
+			}
+			&:hover,
+			&:focus {
+				color: @JMskipMenuFontColorHover;
+				background: @JMskipMenuBackgroundHover;
+			}
+		}
+	}
+}
+
+// mobile menu
+//----------------------------
+
+.mmhide() {
+	left: -100%;
+	z-index: 80;
+}
+
+.mmshow() {
+	left: 0;
+	z-index: 999;
+}
+
+#jm-mobile-menu {
+	.jm-module-raw {
+		display: block !important;
+		position: fixed;
+		bottom: 0;
+		.mmhide();
+		width: 100%;
+		background: @JMheaderBackground;
+		border-top: 1px solid @JMtopmenuFontColor;
+	}
+	ul.nav.menu {
+		margin: 0;
+		text-align: center;
+		> li {
+			padding: 0;
+			margin: 0;
+			border: none;
+			background: none;
+			display: inline-block;
+			vertical-align: top;
+		}
+		> li > a {
+			color: @JMtopmenuFontColor;
+			font-size: 0.833em;
+			white-space: nowrap;
+			padding: 20px 25px;
+			text-align: center;
+			&:before {
+				display: none;
+			}
+			&:hover,
+			&:focus {
+				color: @JMtopmenuFontColorHover;
+				text-decoration: underline;
+			}
+			.image-title {
+				display: block;
+				padding-top: 15px;
+			}
+		}
+		ul {
+			display: none;
+		}
+	}
+}
+
+//utilities classes
+#jm-mobile-menu {
+	// For desktops
+	.visible-phone     { .mmhide(); }
+	.visible-tablet    { .mmhide(); }
+	.hidden-desktop    { .mmhide(); }
+	.visible-desktop   { .mmshow(); }
+
+	// Tablets & small desktops only
+	@media (min-width: 768px) and (max-width: 979px) {
+		.hidden-desktop    { .mmshow(); }
+		.visible-desktop   { .mmhide(); }
+		.visible-tablet    { .mmshow(); }
+		.hidden-tablet     { .mmhide(); }
+	}
+
+	// Phones only
+	@media (max-width: 767px) {
+		.hidden-desktop    { .mmshow(); }
+		.visible-desktop   { .mmhide(); }
+		.visible-phone     { .mmshow(); }
+		.hidden-phone      { .mmhide(); }
+	}
+
+	@media (min-width: 1200px) { // JM-Layout: Wide screen
+		.hidden-wide { .mmhide(); }
+	}
+	@media (min-width: 980px) and (max-width: 1199px) { // JM-Layout: Normal screen
+		.hidden-normal { .mmhide(); }
+	}
+	@media (min-width: 768px) and (max-width: 979px) { // JM-Layout: XTablet screen
+		.hidden-xtablet { .mmhide(); }
+	}
+	@media (min-width: 481px) and (max-width: 767px) { // JM-Layout: Tablet screen
+		.hidden-tablet { .mmhide(); }
+	}
+	@media (max-width: 480px) { // JM-Layout: Mobile screen
+		.hidden-mobile { .mmhide(); }
+	}
+}
+
+.mobile-menu-focused {
+	#jm-mobile-menu {
+		.jm-module-raw {
+			.mmshow();
+		}
+	}
+}
