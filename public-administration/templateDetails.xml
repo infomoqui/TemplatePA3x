@@ -2,12 +2,12 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="3.0" type="template" client="site" method="upgrade">
 	<name>public-administration</name>
-	<version>1.00</version>
-	<creationDate>19/02/2018</creationDate>
+	<version>2.00</version>
+	<creationDate>09/07/2020</creationDate>
 	<author>joomla-monster.com</author>
 	<authorEmail>contact@joomla-monster.com</authorEmail>
 	<authorUrl>joomla-monster.com</authorUrl>
-	<copyright>Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<group>jmf-ef4</group>
 	<description>
@@ -19,33 +19,15 @@
 		<div class="pull-left" style="max-width: 64.31%; box-sizing: border-box; -webkit-box-sizing: border-box; padding: 0 30px;">
 			<div style="margin-bottom: 20px;">
 				<h2 style="font-size: 33px; line-height: 40px; font-weight: 600; color: #393939; margin-top: 0;">Public Administration</h2>
-				<span style="color: #a0a0a0; display: block; margin-top: -10px;">Template version: 1.00</span>
-				<div style="margin: 20px 0 0;">
-					<a style="text-decoration: none !important; outline: none;" target="_blank" href="#">
-						<img src="http://joomla-monster.com/images/templates/ef4.png" />
-					</a>
-					<a href="http://www.joomla-monster.com/index.php?option=com_content&catid=137&id=897&view=article&Itemid=1027" target="_blank" style="margin: 0 20px; color: #3ea5ea;">Based on EF4 Framework</a>
-				</div>
+				<span style="color: #a0a0a0; display: block; margin-top: -10px;">Template version: 2.00</span>
 			</div>
 			<div style="margin-bottom: 20px;">
-				<a style="text-decoration: none !important; display: block; outline: none;" target="_blank" href="http://www.joomla-monster.com/">
-					<img src="http://joomla-monster.com/images/templates/monster.png" />
+				<a style="text-decoration: none !important; display: block; outline: none;" target="_blank" href="https://etico.rilevant.com/">
+					<img src="../templates/public-administration/images/logo_etico_rilevant_nero.png" />
 				</a>
+				<p>L'uso di questo template è concesso gratuitamente al solo scopo didattico, qualsiasi utilizzo a scopo commerciale o pubblicazione su siti on line deve essere autorizzato dal produttore: <a target="_blank" href="https://etico.rilevant.com/">Etico.Rilevant di Coopera srls</a></p>
 			</div>
-			<div style="margin: 0 -20px;">
-				<div style="display: inline-block; margin: 0 20px 20px;">
-					<span style="display: block; color: #a0a0a0;">Templates for Joomla!</span>
-					<a style="font-size: 15px; color: #3ea5ea;" target="_blank" href="http://www.joomla-monster.com">www.joomla-monster.com</a>
-				</div>
-				<div style="display: inline-block; margin: 0 20px 20px;">
-					<span style="display: block; color: #a0a0a0;">Extensions for Joomla!</span>
-					<a style="font-size: 15px; color: #3ea5ea;" target="_blank" href="http://www.dj-extensions.com">www.dj-extensions.com</a>
-				</div>
-				<div style="display: inline-block; margin: 0 20px 20px;">
-					<span style="display: block; color: #a0a0a0;">Custom Joomla! Services</span>
-					<a style="font-size: 15px; color: #3ea5ea;" target="_blank" href="http://www.design-joomla.eu">www.design-joomla.eu</a>
-				</div>
-			</div>
+
 		</div>
 	</div>
 	]]>

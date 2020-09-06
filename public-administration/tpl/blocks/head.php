@@ -217,16 +217,15 @@ if ($masonry == "1") {
 	$this->addScript(JMF_TPL_URL.'/'.'js'.'/'.'masonry.pkgd.min.js');
 	
 	$document->addScriptDeclaration("
-	jQuery(window).load(function() {
-		if( jQuery('.blog').length || jQuery('.blog-featured').length ) {
-			jQuery('.blog, .blog-featured').addClass('masonry');
+	window.onload = function() {
+		if( document.querySelector('.blog, .blog-featured') !== null ) {
+			document.querySelector('.blog, .blog-featured').classList.add('masonry');
 			var msnry = new Masonry( '.blog .items-container, .blog-featured .items-container', {
 				percentPosition: true,
 				itemSelector: '.item',
 			});
 		}
-
-	});
+	};
 	");
 }
 

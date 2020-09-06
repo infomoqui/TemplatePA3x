@@ -29,8 +29,9 @@
 	<li class="resizer">
 		<ul>
 			<li class="resizer-label"><span class="jm-separator"><?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_TITLE' );?></span></li>
-			<li><button data-href="index.php?fontsize=70" class="jm-font-smaller" title="<?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_SMALL_DESC' );?>"><span class="fa fa-minus-circle" aria-hidden="true"></span><span class="sr-only"><?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_SMALL' );?></span></button></li>
+			<li><button data-href="index.php?fontreadable=1" class="jm-font-readable" title="<?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_READABLE_DESC' );?>"><span class="fa fa-text-width" aria-hidden="true"></span><span class="sr-only"><?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_READABLE' );?></span></button></li>
 			<li><button data-href="index.php?fontsize=100" class="jm-font-normal" title="<?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_NORMAL_DESC' );?>"><span class="fa fa-font" aria-hidden="true"></span><span class="sr-only"><?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_NORMAL' );?></span></button></li>
+			<li><button data-href="index.php?fontsize=70" class="jm-font-smaller" title="<?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_SMALL_DESC' );?>"><span class="fa fa-minus-circle" aria-hidden="true"></span><span class="sr-only"><?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_SMALL' );?></span></button></li>
 			<li><button data-href="index.php?fontsize=130" class="jm-font-larger" title="<?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_LARGE_DESC' );?>"><span class="fa fa-plus-circle" aria-hidden="true"></span><span class="sr-only"><?php echo JText::_( 'PLG_SYSTEM_JMFRAMEWORK_CONFIG_RESIZER_LARGE' );?></span></button></li>
 		</ul>
 	</li>

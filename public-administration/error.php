@@ -140,13 +140,6 @@ if( $errorcode=='404' ) {
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
 	<link rel="stylesheet" href="<?php echo JURI::base(); ?>templates/<?php echo $this->template; ?>/css/error.css" type="text/css" />
-	<?php
-	// js fallback if no file_get_contents and curl
-	if( $errorcode=='404' && !empty($errorpage) && $dbresults && $url ) { ?>
-	<script type="text/javascript">
-		window.location.href="<?php echo $url; ?>";
-	</script>
-	<?php } ?>
 </head>
 <body>
 	<div class="jm-error">
@@ -164,6 +157,29 @@ if( $errorcode=='404' ) {
 			<div class="jm-error-buttons">
 				<a class="jm-error-left" href="javascript:history.go(-1)"><?php echo JText::_('PLG_SYSTEM_JMFRAMEWORK_JERROR_BACK'); ?></a> <a class="jm-error-right" href="<?php echo JURI::base(); ?>" title="<?php echo JText::_('PLG_SYSTEM_JMFRAMEWORK_JERROR_HOME_PAGE'); ?>"><?php echo JText::_('PLG_SYSTEM_JMFRAMEWORK_JERROR_HOME_PAGE'); ?></a>
 			</div>
+			<?php if ($this->debug) : ?>
+			<pre>
+				<?php echo $this->renderBacktrace(); ?>
+				<?php // Check if there are more Exceptions and render their data as well ?>
+				<?php if ($this->error->getPrevious()) : ?>
+					<?php $loop = true; ?>
+					<?php // Reference $this->_error here and in the loop as setError() assigns errors to this property and we need this for the backtrace to work correctly ?>
+					<?php // Make the first assignment to setError() outside the loop so the loop does not skip Exceptions ?>
+					<?php $this->setError($this->_error->getPrevious()); ?>
+					<?php while ($loop === true) : ?>
+						<p><strong><?php echo JText::_('JERROR_LAYOUT_PREVIOUS_ERROR'); ?></strong></p>
+						<p>
+								<?php echo htmlspecialchars($this->_error->getMessage(), ENT_QUOTES, 'UTF-8'); ?>
+							<br/><?php echo htmlspecialchars($this->_error->getFile(), ENT_QUOTES, 'UTF-8');?>:<?php echo $this->_error->getLine(); ?>
+							</p>
+						<?php echo $this->renderBacktrace(); ?>
+						<?php $loop = $this->setError($this->_error->getPrevious()); ?>
+					<?php endwhile; ?>
+					<?php // Reset the main error object to the base error ?>
+					<?php $this->setError($this->error); ?>
+				<?php endif; ?>
+			</pre>
+			<?php endif; ?>
 		</div>
 	</div>
 </body>

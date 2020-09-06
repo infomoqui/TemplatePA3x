@@ -167,8 +167,12 @@ if (isset($_GET['fontsize'])) { //check fsize in address
 	}
 } else {
 	if(isset($_COOKIE['jm-font-size'])) { //check fsize in cookie
-		$fsize = 'fsize'.$_COOKIE['jm-font-size'];
+		$fsize = 'fsize'.(int)$_COOKIE['jm-font-size'];
 	}
+}
+
+if (isset($_GET['fontreadable']) || isset($_COOKIE['jm-font-readable'])) { //check fsize in address
+	$fsize .= ' font-readable';
 }
 
 // custom classes
