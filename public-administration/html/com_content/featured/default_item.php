@@ -33,11 +33,11 @@ $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associat
 <?php endif; ?>
 
 <?php if ($params->get('show_title')) : ?>
-	<span class="page-header">
+	<div class="page-header">
 		<h2 class="item-title" itemprop="headline">
 			<?php echo $this->escape($this->item->title); ?>
 		</h2>
-	</span>
+	</div>
 <?php endif; ?>
 
 <?php if ($params->get('link_titles')) : ?>

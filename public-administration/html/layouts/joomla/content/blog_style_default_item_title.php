@@ -16,7 +16,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 ?>
 
 <?php if ($displayData->state == 0 || $params->get('show_title') || ($params->get('show_author') && !empty($displayData->author ))) : ?>
-	<span class="page-header">
+	<div class="page-header">
 		<?php if ($params->get('show_title')) : ?>
 			<h2 itemprop="name">
 				<?php echo $this->escape($displayData->title); ?>
@@ -36,5 +36,5 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 		) : ?>
 			<span class="label label-warning"><?php echo JText::_('JEXPIRED'); ?></span>
 		<?php endif; ?>
-	</span>
+	</div>
 <?php endif; ?>
