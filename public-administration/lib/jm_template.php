@@ -347,6 +347,9 @@ class JMTemplate extends JMFTemplate {
 		$JMtopmenuFontColor = $this->params->get('JMtopmenuFontColor', $this->defaults->get('JMtopmenuFontColor'));
 		$bootstrap_vars['JMtopmenuFontColor'] = $JMtopmenuFontColor;
 
+		$JMtopmenuBackground = $this->params->get('JMtopmenuBackground', $this->defaults->get('JMtopmenuBackground'));
+		$bootstrap_vars['JMtopmenuBackground'] = $JMtopmenuBackground;
+
 		//submenu
 		$JMtopSubmenuBackground = $this->params->get('JMtopSubmenuBackground', $this->defaults->get('JMtopSubmenuBackground'));
 		$bootstrap_vars['JMtopSubmenuBackground'] = $JMtopSubmenuBackground;

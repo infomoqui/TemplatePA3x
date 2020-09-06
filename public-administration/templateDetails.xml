@@ -2,8 +2,8 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="3.0" type="template" client="site" method="upgrade">
 	<name>public-administration</name>
-	<version>2.00</version>
-	<creationDate>09/07/2020</creationDate>
+	<version>2.01</version>
+	<creationDate>06/08/2020</creationDate>
 	<author>joomla-monster.com</author>
 	<authorEmail>contact@joomla-monster.com</authorEmail>
 	<authorUrl>joomla-monster.com</authorUrl>
@@ -232,6 +232,7 @@
 				<!-- TOPMENU -->
 				<field name="spacer_color_4" type="spacer" class="jmtext" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPMENU" />
 				<field name="JMtopmenuFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_TOPMENU_FONT_COLOR_DESC" />
+				<field name="JMtopmenuBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_BG_COLOR_DESC" />
 				<field name="JMtopSubmenuBackground" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_BG_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_BG_COLOR_DESC" />
 				<field name="JMtopSubmenuFontColor" type="color" default="" label="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_FONT_COLOR" description="PLG_SYSTEM_JMFRAMEWORK_CONFIG_SUBMENU_FONT_COLOR_DESC" />
 
