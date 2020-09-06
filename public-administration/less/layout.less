@@ -90,14 +90,19 @@
 		&:before {
 			display: none;
 		}
-		a {
+		button {
+			font: inherit;
+			float: left;
 			display: block;
 			margin: 0 5px;
+			padding: 0 5px;
+			line-height: 18px;
 			color: @JMtopbarFontColor;
+			background: @JMtopbarBackground;
+			border: 1px solid jmlighten(@JMtopbarBackground, 80%);
+			.box-sizing(border-box);
 			&:hover {
-				span {
-					background: @JMstyle;
-				}
+				background: @JMstyle;
 			}
 		}
 		.jm-separator {
@@ -114,18 +119,8 @@
 		}
 	}
 	.contrast {
-		a {
-			float: left;
-			text-decoration: none;
-			span {
-				display: block;
-				margin: 0;
-				padding: 0 5px;
-				line-height: 18px;
-				border: 1px solid jmlighten(@JMtopbarBackground, 80%);
-				.box-sizing(border-box);
-			}
-			&.jm-highcontrast span {
+		button {
+			&.jm-highcontrast {
 				background: @JMhcBackground;
 				color: @JMhcFontColor;
 				&:hover {
@@ -133,7 +128,7 @@
 					color: @JMhcBackground;
 				}
 			}
-			&.jm-highcontrast2 span {
+			&.jm-highcontrast2 {
 				background: @JMhc2Background;
 				color: @JMhc2FontColor;
 				&:hover {
@@ -141,28 +136,13 @@
 					color: @JMhc2Background;
 				}
 			}
-			&.jm-highcontrast3 span {
+			&.jm-highcontrast3 {
 				background: @JMhc3Background;
 				color: @JMhc3FontColor;
 				&:hover {
 					background: @JMhc3FontColor;
 					color: @JMhc3Background;
 				}
-			}
-		}
-	}
-	.container-width,
-	.resizer {
-		a {
-			float: left;
-			text-decoration: none;
-			span {
-				display: block;
-				margin: 0;
-				padding: 0 5px;
-				line-height: 18px;
-				border: 1px solid jmlighten(@JMtopbarBackground, 80%);
-				.box-sizing(border-box);
 			}
 		}
 	}
@@ -392,10 +372,9 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-image: url("../images/backtotop.png");
-		.opacity(30);
 		&:hover {
-			.opacity(60);
 			text-decoration: none;
+			background-color: darken(@JMstyle, 20%);
 		}
 	}
 }
